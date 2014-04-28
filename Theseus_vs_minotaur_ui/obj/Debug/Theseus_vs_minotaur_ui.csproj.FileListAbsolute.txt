@@ -1,0 +1,28 @@
+\\adfsstud2\r-u\twa26\documents\visual studio 2012\Projects\Theseus_vs_minotaur\Theseus_vs_minotaur_ui\bin\Debug\Theseus_vs_minotaur_ui.exe.config
+\\adfsstud2\r-u\twa26\documents\visual studio 2012\Projects\Theseus_vs_minotaur\Theseus_vs_minotaur_ui\bin\Debug\Theseus_vs_minotaur_ui.exe
+\\adfsstud2\r-u\twa26\documents\visual studio 2012\Projects\Theseus_vs_minotaur\Theseus_vs_minotaur_ui\bin\Debug\Theseus_vs_minotaur_ui.pdb
+\\adfsstud2\r-u\twa26\documents\visual studio 2012\Projects\Theseus_vs_minotaur\Theseus_vs_minotaur_ui\obj\Debug\Theseus_vs_minotaur_ui.csprojResolveAssemblyReference.cache
+\\adfsstud2\r-u\twa26\documents\visual studio 2012\Projects\Theseus_vs_minotaur\Theseus_vs_minotaur_ui\obj\Debug\Theseus_vs_minotaur_ui.Properties.Resources.resources
+\\adfsstud2\r-u\twa26\documents\visual studio 2012\Projects\Theseus_vs_minotaur\Theseus_vs_minotaur_ui\obj\Debug\Theseus_vs_minotaur_ui.csproj.GenerateResource.Cache
+\\adfsstud2\r-u\twa26\documents\visual studio 2012\Projects\Theseus_vs_minotaur\Theseus_vs_minotaur_ui\obj\Debug\Theseus_vs_minotaur_ui.exe
+\\adfsstud2\r-u\twa26\documents\visual studio 2012\Projects\Theseus_vs_minotaur\Theseus_vs_minotaur_ui\obj\Debug\Theseus_vs_minotaur_ui.pdb
+H:\Projects\Theseus_vs_minotaur\Theseus_vs_minotaur_ui\bin\Debug\Theseus_vs_minotaur_ui.exe.config
+H:\Projects\Theseus_vs_minotaur\Theseus_vs_minotaur_ui\obj\Debug\Theseus_vs_minotaur_ui.exe
+H:\Projects\Theseus_vs_minotaur\Theseus_vs_minotaur_ui\obj\Debug\Theseus_vs_minotaur_ui.pdb
+H:\Projects\Theseus_vs_minotaur\BCPR283-A\Theseus_vs_minotaur_ui\bin\Debug\Theseus_vs_minotaur_ui.exe.config
+H:\Projects\Theseus_vs_minotaur\BCPR283-A\Theseus_vs_minotaur_ui\obj\Debug\Theseus_vs_minotaur_ui.exe
+H:\Projects\Theseus_vs_minotaur\BCPR283-A\Theseus_vs_minotaur_ui\obj\Debug\Theseus_vs_minotaur_ui.pdb
+C:\gitTest\BCPR283-A\Theseus_vs_minotaur_ui\bin\Debug\Theseus_vs_minotaur_ui.exe.config
+C:\gitTest\BCPR283-A\Theseus_vs_minotaur_ui\obj\Debug\Theseus_vs_minotaur_ui.exe
+C:\gitTest\BCPR283-A\Theseus_vs_minotaur_ui\obj\Debug\Theseus_vs_minotaur_ui.pdb
+H:\Projects\BCPR283-A\Theseus_vs_minotaur_ui\bin\Debug\Theseus_vs_minotaur_ui.exe.config
+H:\Projects\BCPR283-A\Theseus_vs_minotaur_ui\obj\Debug\Theseus_vs_minotaur_ui.exe
+H:\Projects\BCPR283-A\Theseus_vs_minotaur_ui\obj\Debug\Theseus_vs_minotaur_ui.pdb
+H:\Projects\BCPR283-A\Theseus_vs_minotaur_ui\bin\Debug\Theseus_vs_minotaur_ui.exe
+H:\Projects\BCPR283-A\Theseus_vs_minotaur_ui\bin\Debug\Theseus_vs_minotaur_ui.pdb
+H:\Projects\BCPR283-A\Theseus_vs_minotaur_ui\bin\Debug\Theseus_vs_Minotaur_library.dll
+H:\Projects\BCPR283-A\Theseus_vs_minotaur_ui\bin\Debug\Theseus_vs_Minotaur_library.pdb
+H:\Projects\BCPR283-A\Theseus_vs_minotaur_ui\obj\Debug\Theseus_vs_minotaur_ui.csprojResolveAssemblyReference.cache
+H:\Projects\BCPR283-A\Theseus_vs_minotaur_ui\obj\Debug\Theseus_vs_minotaur_ui.Form1.resources
+H:\Projects\BCPR283-A\Theseus_vs_minotaur_ui\obj\Debug\Theseus_vs_minotaur_ui.Properties.Resources.resources
+H:\Projects\BCPR283-A\Theseus_vs_minotaur_ui\obj\Debug\Theseus_vs_minotaur_ui.csproj.GenerateResource.Cache

@@ -1,0 +1,5 @@
+H:\Projects\BCPR283-A\Theseus_vs_Minotaur_library\bin\Debug\Theseus_vs_Minotaur_library.dll
+H:\Projects\BCPR283-A\Theseus_vs_Minotaur_library\bin\Debug\Theseus_vs_Minotaur_library.pdb
+H:\Projects\BCPR283-A\Theseus_vs_Minotaur_library\obj\Debug\Theseus_vs_Minotaur_library.csprojResolveAssemblyReference.cache
+H:\Projects\BCPR283-A\Theseus_vs_Minotaur_library\obj\Debug\Theseus_vs_Minotaur_library.dll
+H:\Projects\BCPR283-A\Theseus_vs_Minotaur_library\obj\Debug\Theseus_vs_Minotaur_library.pdb
