@@ -26,3 +26,16 @@ H:\Projects\BCPR283-A\Theseus_vs_minotaur_ui\obj\Debug\Theseus_vs_minotaur_ui.cs
 H:\Projects\BCPR283-A\Theseus_vs_minotaur_ui\obj\Debug\Theseus_vs_minotaur_ui.Form1.resources
 H:\Projects\BCPR283-A\Theseus_vs_minotaur_ui\obj\Debug\Theseus_vs_minotaur_ui.Properties.Resources.resources
 H:\Projects\BCPR283-A\Theseus_vs_minotaur_ui\obj\Debug\Theseus_vs_minotaur_ui.csproj.GenerateResource.Cache
+C:\Users\paul\Documents\GitHub\Game\Theseus_vs_minotaur_ui\bin\Debug\Theseus_vs_minotaur_ui.exe.config
+C:\Users\paul\Documents\GitHub\Game\Theseus_vs_minotaur_ui\obj\Debug\Theseus_vs_minotaur_ui.exe
+C:\Users\paul\Documents\GitHub\Game\Theseus_vs_minotaur_ui\obj\Debug\Theseus_vs_minotaur_ui.pdb
+C:\Users\paul\Documents\GitHub\Game\Theseus_vs_minotaur_ui\bin\Debug\Theseus_vs_minotaur_ui.exe
+C:\Users\paul\Documents\GitHub\Game\Theseus_vs_minotaur_ui\bin\Debug\Theseus_vs_minotaur_ui.pdb
+C:\Users\paul\Documents\GitHub\Game\Theseus_vs_minotaur_ui\bin\Debug\Theseus_vs_Minotaur_library.dll
+C:\Users\paul\Documents\GitHub\Game\Theseus_vs_minotaur_ui\bin\Debug\Theseus_vs_Minotaur_library.pdb
+C:\Users\paul\Documents\GitHub\Game\Theseus_vs_minotaur_ui\obj\Debug\Theseus_vs_minotaur_ui.csprojResolveAssemblyReference.cache
+C:\Users\paul\Documents\GitHub\Game\Theseus_vs_minotaur_ui\obj\Debug\Theseus_vs_minotaur_ui.Form1.resources
+C:\Users\paul\Documents\GitHub\Game\Theseus_vs_minotaur_ui\obj\Debug\Theseus_vs_minotaur_ui.levelDesigner.resources
+C:\Users\paul\Documents\GitHub\Game\Theseus_vs_minotaur_ui\obj\Debug\Theseus_vs_minotaur_ui.Properties.Resources.resources
+C:\Users\paul\Documents\GitHub\Game\Theseus_vs_minotaur_ui\obj\Debug\Theseus_vs_minotaur_ui.csproj.GenerateResource.Cache
+C:\Users\paul\Documents\GitHub\Game\Theseus_vs_minotaur_ui\obj\Debug\Theseus_vs_minotaur_ui.NewProject.resources
