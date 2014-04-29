@@ -26,3 +26,6 @@ H:\Projects\BCPR283-A\Theseus_vs_minotaur_ui\obj\Debug\Theseus_vs_minotaur_ui.cs
 H:\Projects\BCPR283-A\Theseus_vs_minotaur_ui\obj\Debug\Theseus_vs_minotaur_ui.Form1.resources
 H:\Projects\BCPR283-A\Theseus_vs_minotaur_ui\obj\Debug\Theseus_vs_minotaur_ui.Properties.Resources.resources
 H:\Projects\BCPR283-A\Theseus_vs_minotaur_ui\obj\Debug\Theseus_vs_minotaur_ui.csproj.GenerateResource.Cache
+C:\Users\Jeremy\Google Drive\Game\Theseus_vs_minotaur_ui\bin\Debug\Theseus_vs_minotaur_ui.exe.config
+C:\Users\Jeremy\Google Drive\Game\Theseus_vs_minotaur_ui\obj\Debug\Theseus_vs_minotaur_ui.exe
+C:\Users\Jeremy\Google Drive\Game\Theseus_vs_minotaur_ui\obj\Debug\Theseus_vs_minotaur_ui.pdb

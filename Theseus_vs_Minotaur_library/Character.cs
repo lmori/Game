@@ -9,6 +9,7 @@ namespace Theseus_vs_Minotaur_library
     class Character
     {
         int xPosition, yPosition;
+     //   Level myLevel; Possible implementation??
         // image/skin?
 
         public int YPosition
@@ -27,10 +28,10 @@ namespace Theseus_vs_Minotaur_library
 
     class Theseus : Character
     {
-        public bool Move (int newXPosition, int newYPosition)
+        public bool Move (int newXPosition, int newYPosition, Direction direction)
         {
 
-            if (CanMove(Direction direction) == true) 
+            // if (myLevel.IsWall(XPosition, YPosition, direction) == false)  Possible implementation??
             {
                 // move the player
             }

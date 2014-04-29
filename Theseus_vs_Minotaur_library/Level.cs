@@ -37,7 +37,7 @@ namespace Theseus_vs_Minotaur_library
         private bool[][] horizontalWallArray;
         [XmlElement(ElementName = "Horizontal Wall Array")]
 
-        private Array gridSize;
+        private int[] gridSize;
         [XmlElement(ElementName = "Grid Size")]
 
         public string FileName
@@ -94,14 +94,14 @@ namespace Theseus_vs_Minotaur_library
             set { horizontalWallArray = value; }
         }
 
-        public Array GridSize
+        public int[] GridSize
         {
             get { return gridSize; }
             set { gridSize = value; }
         }
 
         public Level(String fileName, String levelName, String creatorName, int minotaurXPosition, int minotaurYPosition,
-                    int theseusXPosition, int theseusYPosition, bool[][] verticalWallArray, bool[][] horizontalWallArray, Array gridSize)
+                    int theseusXPosition, int theseusYPosition, bool[][] verticalWallArray, bool[][] horizontalWallArray, int[] gridSize)
         {
             FileName = fileName;
             LevelName = levelName;
@@ -115,8 +115,11 @@ namespace Theseus_vs_Minotaur_library
             GridSize = gridSize;
         }
 
-
-        public bool CanMove(int oldXPosition, int oldYPosition, Direction direction)
+        //renamed the method from "CanMove" to "IsWall". Changed the parameters it takes
+        //from "oldXPosition.." to column and "oldYPosition" to "row"
+        //Method takes a column and a row and a direction. It returns a boolean of whether a wall is in that direction
+        //suggested usage - if IsWall(column, row, direction) == false then move else dont 
+        public bool IsWall(int column, int row, Direction direction)
         {
             int innerArray, innerArrayIndex;
             bool[][] outerArray;
@@ -127,26 +130,26 @@ namespace Theseus_vs_Minotaur_library
             {
                 case Direction.Right:
                     outerArray = verticalWallArray;
-                    innerArray = oldYPosition - 1;
-                    innerArrayIndex = oldXPosition;
+                    innerArray = row - 1;
+                    innerArrayIndex = column;
                     result = outerArray[innerArray][innerArrayIndex];
                     break;
                 case Direction.Left:
                     outerArray = verticalWallArray;
-                    innerArray = oldYPosition - 1;
-                    innerArrayIndex = oldXPosition - 1;
+                    innerArray = row - 1;
+                    innerArrayIndex = column - 1;
                     result = outerArray[innerArray][innerArrayIndex];
                     break;
                 case Direction.Up:
                     outerArray = horizontalWallArray;
-                    innerArray = oldYPosition - 1;
-                    innerArrayIndex = oldXPosition - 1;
+                    innerArray = row - 1;
+                    innerArrayIndex = column - 1;
                     result = outerArray[innerArray][innerArrayIndex];
                     break;
                 case Direction.Down:
                     outerArray = horizontalWallArray;
-                    innerArray = oldYPosition;
-                    innerArrayIndex = oldXPosition - 1;
+                    innerArray = row;
+                    innerArrayIndex = column - 1;
                     result = outerArray[innerArray][innerArrayIndex];
                     break;
             }
