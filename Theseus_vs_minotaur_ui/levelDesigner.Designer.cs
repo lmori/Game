@@ -33,11 +33,13 @@
             this.save = new System.Windows.Forms.Button();
             this.export = new System.Windows.Forms.Button();
             this.import = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // exit
             // 
-            this.exit.Location = new System.Drawing.Point(391, 266);
+            this.exit.Location = new System.Drawing.Point(522, 336);
             this.exit.Name = "exit";
             this.exit.Size = new System.Drawing.Size(75, 23);
             this.exit.TabIndex = 0;
@@ -47,7 +49,7 @@
             // 
             // createNewProject
             // 
-            this.createNewProject.Location = new System.Drawing.Point(73, 210);
+            this.createNewProject.Location = new System.Drawing.Point(12, 249);
             this.createNewProject.Name = "createNewProject";
             this.createNewProject.Size = new System.Drawing.Size(75, 23);
             this.createNewProject.TabIndex = 1;
@@ -57,7 +59,7 @@
             // 
             // save
             // 
-            this.save.Location = new System.Drawing.Point(91, 278);
+            this.save.Location = new System.Drawing.Point(12, 336);
             this.save.Name = "save";
             this.save.Size = new System.Drawing.Size(75, 23);
             this.save.TabIndex = 2;
@@ -66,7 +68,7 @@
             // 
             // export
             // 
-            this.export.Location = new System.Drawing.Point(273, 278);
+            this.export.Location = new System.Drawing.Point(228, 336);
             this.export.Name = "export";
             this.export.Size = new System.Drawing.Size(75, 23);
             this.export.TabIndex = 3;
@@ -75,18 +77,29 @@
             // 
             // import
             // 
-            this.import.Location = new System.Drawing.Point(183, 278);
+            this.import.Location = new System.Drawing.Point(128, 336);
             this.import.Name = "import";
             this.import.Size = new System.Drawing.Size(75, 23);
             this.import.TabIndex = 4;
             this.import.Text = "Import";
             this.import.UseVisualStyleBackColor = true;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(179, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Padding = new System.Windows.Forms.Padding(1);
+            this.pictureBox1.Size = new System.Drawing.Size(300, 300);
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // levelDesigner
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(490, 313);
+            this.ClientSize = new System.Drawing.Size(638, 371);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.import);
             this.Controls.Add(this.export);
             this.Controls.Add(this.save);
@@ -94,6 +107,7 @@
             this.Controls.Add(this.exit);
             this.Name = "levelDesigner";
             this.Text = "levelDesigner";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -105,5 +119,6 @@
         private System.Windows.Forms.Button save;
         private System.Windows.Forms.Button export;
         private System.Windows.Forms.Button import;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
