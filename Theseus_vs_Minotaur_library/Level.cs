@@ -9,7 +9,6 @@ namespace Theseus_vs_Minotaur_library
 {
     public class Level
     {
-
         private string fileName;
         [XmlElement(ElementName = "File Name")]
 

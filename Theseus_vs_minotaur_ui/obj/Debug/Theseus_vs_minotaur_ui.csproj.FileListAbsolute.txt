@@ -29,3 +29,14 @@ H:\Projects\BCPR283-A\Theseus_vs_minotaur_ui\obj\Debug\Theseus_vs_minotaur_ui.cs
 C:\Users\Jeremy\Google Drive\Game\Theseus_vs_minotaur_ui\bin\Debug\Theseus_vs_minotaur_ui.exe.config
 C:\Users\Jeremy\Google Drive\Game\Theseus_vs_minotaur_ui\obj\Debug\Theseus_vs_minotaur_ui.exe
 C:\Users\Jeremy\Google Drive\Game\Theseus_vs_minotaur_ui\obj\Debug\Theseus_vs_minotaur_ui.pdb
+C:\Users\Catherine\Documents\GitHub\Projects\TheseusVsMinotaur\Theseus_vs_minotaur_ui\bin\Debug\Theseus_vs_minotaur_ui.exe.config
+C:\Users\Catherine\Documents\GitHub\Projects\TheseusVsMinotaur\Theseus_vs_minotaur_ui\obj\Debug\Theseus_vs_minotaur_ui.exe
+C:\Users\Catherine\Documents\GitHub\Projects\TheseusVsMinotaur\Theseus_vs_minotaur_ui\obj\Debug\Theseus_vs_minotaur_ui.pdb
+C:\Users\Catherine\Documents\GitHub\Projects\TheseusVsMinotaur\Theseus_vs_minotaur_ui\bin\Debug\Theseus_vs_minotaur_ui.exe
+C:\Users\Catherine\Documents\GitHub\Projects\TheseusVsMinotaur\Theseus_vs_minotaur_ui\bin\Debug\Theseus_vs_minotaur_ui.pdb
+C:\Users\Catherine\Documents\GitHub\Projects\TheseusVsMinotaur\Theseus_vs_minotaur_ui\bin\Debug\Theseus_vs_Minotaur_library.dll
+C:\Users\Catherine\Documents\GitHub\Projects\TheseusVsMinotaur\Theseus_vs_minotaur_ui\bin\Debug\Theseus_vs_Minotaur_library.pdb
+C:\Users\Catherine\Documents\GitHub\Projects\TheseusVsMinotaur\Theseus_vs_minotaur_ui\obj\Debug\Theseus_vs_minotaur_ui.csprojResolveAssemblyReference.cache
+C:\Users\Catherine\Documents\GitHub\Projects\TheseusVsMinotaur\Theseus_vs_minotaur_ui\obj\Debug\Theseus_vs_minotaur_ui.Form1.resources
+C:\Users\Catherine\Documents\GitHub\Projects\TheseusVsMinotaur\Theseus_vs_minotaur_ui\obj\Debug\Theseus_vs_minotaur_ui.Properties.Resources.resources
+C:\Users\Catherine\Documents\GitHub\Projects\TheseusVsMinotaur\Theseus_vs_minotaur_ui\obj\Debug\Theseus_vs_minotaur_ui.csproj.GenerateResource.Cache
