@@ -9,7 +9,7 @@ namespace Theseus_vs_Minotaur_library
 {
     public class Level
     {
-       private string fileName;
+        private string fileName;
         [XmlElement(ElementName = "File Name")]
 
         private string levelName;
@@ -18,15 +18,19 @@ namespace Theseus_vs_Minotaur_library
         private string creatorName;
         [XmlElement(ElementName = "Creator Name")]
 
+        // Initial level starting position
         private int theseusXPosition;
         [XmlElement(ElementName = "Theseus X Position")]
 
+        // Initial level starting position
         private int minotaurXPosition;
         [XmlElement(ElementName = "Minotaur X Position")]
 
+        // Initial level starting position
         private int theseusYPosition;
         [XmlElement(ElementName = "Theseus Y Position")]
 
+        // Initial level starting position
         private int minotaurYPosition;
         [XmlElement(ElementName = "Minotaur Y Position")]
 
@@ -35,7 +39,8 @@ namespace Theseus_vs_Minotaur_library
 
         private bool[][] horizontalWallArray;
         [XmlElement(ElementName = "Horizontal Wall Array")]
-
+        
+        // Level [X, Y] rows and columns
         private int[] gridSize;
         [XmlElement(ElementName = "Grid Size")]
 

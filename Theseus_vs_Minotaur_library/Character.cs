@@ -8,8 +8,8 @@ namespace Theseus_vs_Minotaur_library
 {
    class Character
     {
-        int xPosition, yPosition;
-     //   Level myLevel; Possible implementation??
+        private int xPosition, yPosition;
+        // Level myLevel; Possible implementation??
         // image/skin?
 
         public int YPosition

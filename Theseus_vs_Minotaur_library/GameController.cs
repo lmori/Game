@@ -9,6 +9,9 @@ namespace Theseus_vs_Minotaur_library
     class GameController
     {
         Level currentLevel = new Level(); //requires instance?
+        Theseus myTheseus;
+        Minotaur myMinotaur;
+
         List<Direction> moveList = new List<Direction>();
         float timer;
 
