@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Theseus_vs_Minotaur_library
 {
-    class Character
+   /* class Character
     {
         int xPosition, yPosition;
      //   Level myLevel; Possible implementation??
@@ -137,5 +137,5 @@ namespace Theseus_vs_Minotaur_library
 
             return minotaurMoves;
         }
-    }
+    }*/
 }

@@ -40,3 +40,16 @@ C:\Users\Catherine\Documents\GitHub\Projects\TheseusVsMinotaur\Theseus_vs_minota
 C:\Users\Catherine\Documents\GitHub\Projects\TheseusVsMinotaur\Theseus_vs_minotaur_ui\obj\Debug\Theseus_vs_minotaur_ui.Form1.resources
 C:\Users\Catherine\Documents\GitHub\Projects\TheseusVsMinotaur\Theseus_vs_minotaur_ui\obj\Debug\Theseus_vs_minotaur_ui.Properties.Resources.resources
 C:\Users\Catherine\Documents\GitHub\Projects\TheseusVsMinotaur\Theseus_vs_minotaur_ui\obj\Debug\Theseus_vs_minotaur_ui.csproj.GenerateResource.Cache
+H:\Today\Game\Theseus_vs_minotaur_ui\bin\Debug\Theseus_vs_minotaur_ui.exe.config
+H:\Today\Game\Theseus_vs_minotaur_ui\obj\Debug\Theseus_vs_minotaur_ui.exe
+H:\Today\Game\Theseus_vs_minotaur_ui\obj\Debug\Theseus_vs_minotaur_ui.pdb
+H:\Today\Game\Theseus_vs_minotaur_ui\obj\Debug\Theseus_vs_minotaur_ui.csprojResolveAssemblyReference.cache
+H:\Today\Game\Theseus_vs_minotaur_ui\obj\Debug\Theseus_vs_minotaur_ui.Properties.Resources.resources
+H:\Today\Game\Theseus_vs_minotaur_ui\obj\Debug\Theseus_vs_minotaur_ui.csproj.GenerateResource.Cache
+H:\Today\Game\Theseus_vs_minotaur_ui\bin\Debug\Theseus_vs_minotaur_ui.exe
+H:\Today\Game\Theseus_vs_minotaur_ui\bin\Debug\Theseus_vs_minotaur_ui.pdb
+H:\Today\Game\Theseus_vs_minotaur_ui\bin\Debug\Theseus_vs_Minotaur_library.dll
+H:\Today\Game\Theseus_vs_minotaur_ui\bin\Debug\Theseus_vs_Minotaur_library.pdb
+H:\Today\Game\Theseus_vs_minotaur_ui\obj\Debug\Theseus_vs_Minotaur_library.LOGIN.resources
+H:\Today\Game\Theseus_vs_minotaur_ui\obj\Debug\Theseus_vs_Minotaur_library.userNameForm.resources
+H:\Today\Game\Theseus_vs_minotaur_ui\obj\Debug\Theseus_vs_Minotaur_library.START.resources
