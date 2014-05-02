@@ -9,7 +9,7 @@ namespace Theseus_vs_Minotaur_library
 {
     public class Level
     {
-       /* private string fileName;
+       private string fileName;
         [XmlElement(ElementName = "File Name")]
 
         private string levelName;
@@ -151,10 +151,12 @@ namespace Theseus_vs_Minotaur_library
                     innerArrayIndex = column - 1;
                     result = outerArray[innerArray][innerArrayIndex];
                     break;
+                case Direction.NoChange:
+                    result = false;
+                    break;
             }
             return result;
         }
     
-    */
     }
 }

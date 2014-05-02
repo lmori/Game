@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Theseus_vs_Minotaur_library
 {
-   /* class Character
+   class Character
     {
         int xPosition, yPosition;
      //   Level myLevel; Possible implementation??
@@ -28,17 +28,45 @@ namespace Theseus_vs_Minotaur_library
 
     class Theseus : Character
     {        
-        public bool Move (int newXPosition, int newYPosition, Direction direction)
+        public bool Move (Direction direction)
         {
+            // define variables
+            int newX, newY;
+
+            // Find the target tile based on the inputted direction
+                switch (direction)
+                {
+                    case Direction.Right:
+                        newX = this.XPosition + 1;
+                        newY = this.YPosition;
+                        break;
+                    case Direction.Left:
+                        newX = this.XPosition - 1;
+                        newY = this.YPosition;
+                        break;
+                    case Direction.Up:
+                        newY = this.YPosition - 1;
+                        newX = this.XPosition;
+                        break;
+                    case Direction.Down:
+                        newY = this.YPosition + 1;
+                        newX = this.XPosition;
+                        break;
+                    case Direction.NoChange:
+                        newY = this.YPosition;
+                        newX = this.XPosition;
+                        break;
+                }
+            
             // if there is no wall between theseus and the target tile
-            if (!GameController.CurrentLevel.IsWall(XPosition, YPosition, direction))  //Possible implementation??
+            if (!GameController.CurrentLevel.IsWall(this.XPosition, this.YPosition, direction))  //Possible implementation??
             {
                 // Record the move in the controller list
                 GameController.LogMove(direction);
 
                 // set theseus's new position to the target position
-                this.XPosition = newXPosition;
-                this.YPosition = newYPosition;
+                this.XPosition = newX;
+                this.YPosition = newY;
 
                 // and return true
                 return true;
@@ -59,7 +87,7 @@ namespace Theseus_vs_Minotaur_library
         public int[][] Move () // The Minotaur always moves twice so method returns an array with two sets of xy ints
         {
             // define variables
-            int[][] minotaurMoves;
+            int[][] minotaurMoves = new int[2][];
             int moveCount = 0;
             int theseusX, theseusY, newX, newY;
             Direction horizontalMove, verticalMove;
@@ -68,7 +96,7 @@ namespace Theseus_vs_Minotaur_library
             theseusX = GameController.CurrentLevel.theseusXPosition; // Needs to refer to an instance somehow.
             theseusY = GameController.CurrentLevel.theseusYPosition;
 
-            //
+            // two moves
             while (moveCount < 2)
             {
                 // Compare horozontial locations to get to Theseus
@@ -91,6 +119,7 @@ namespace Theseus_vs_Minotaur_library
                 else
                 {
                     // In case a Y move can be made
+                    horizontalMove = Direction.NoChange;
                     newX = this.XPosition;
                 }
 
@@ -118,9 +147,15 @@ namespace Theseus_vs_Minotaur_library
                     verticalMove = Direction.Down;
                     newY = this.YPosition + 1;
                 }
+                else
+                {
+                    // In case an X move can be made
+                    verticalMove = Direction.NoChange;
+                    newY = this.YPosition;
+                }
 
                 // Check the vertical move is valid (no walls/out of bounds/etc)
-                if (verticalMove != null && !GameController.CurrentLevel.IsWall(newY, newX, horizontalMove))
+                if (!GameController.CurrentLevel.IsWall(newY, newX, horizontalMove))
                 {
                     minotaurMoves[1][0] = newX;
                     minotaurMoves[1][1] = newY;
@@ -128,7 +163,7 @@ namespace Theseus_vs_Minotaur_library
                 }
 
                 // If both horizontal and vertical moves failed, abort move and break from loop
-                if (verticalMove == null && horizontalMove == null || verticalMove != null && horizontalMove == null)
+                if (verticalMove == Direction.NoChange && horizontalMove == Direction.NoChange)
                 {
                     break;
                 }
@@ -137,5 +172,5 @@ namespace Theseus_vs_Minotaur_library
 
             return minotaurMoves;
         }
-    }*/
+    }
 }

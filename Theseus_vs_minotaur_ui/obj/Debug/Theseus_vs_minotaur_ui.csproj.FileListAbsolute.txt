@@ -53,3 +53,6 @@ H:\Today\Game\Theseus_vs_minotaur_ui\bin\Debug\Theseus_vs_Minotaur_library.pdb
 H:\Today\Game\Theseus_vs_minotaur_ui\obj\Debug\Theseus_vs_Minotaur_library.LOGIN.resources
 H:\Today\Game\Theseus_vs_minotaur_ui\obj\Debug\Theseus_vs_Minotaur_library.userNameForm.resources
 H:\Today\Game\Theseus_vs_minotaur_ui\obj\Debug\Theseus_vs_Minotaur_library.START.resources
+H:\Projects\Game\Theseus_vs_minotaur_ui\bin\Debug\Theseus_vs_minotaur_ui.exe.config
+H:\Projects\Game\Theseus_vs_minotaur_ui\obj\Debug\Theseus_vs_minotaur_ui.exe
+H:\Projects\Game\Theseus_vs_minotaur_ui\obj\Debug\Theseus_vs_minotaur_ui.pdb

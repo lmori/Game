@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Theseus_vs_Minotaur_library
 {
-    /*class GameController
+    class GameController
     {
         Level currentLevel = new Level(); //requires instance?
         List<Direction> moveList = new List<Direction>();
@@ -34,11 +34,12 @@ namespace Theseus_vs_Minotaur_library
 
     public enum Direction
     {
+        NoChange,
         Right,
         Left,
         Up,
-        Down
-    }*/
+        Down        
+    }
 
 
 }
