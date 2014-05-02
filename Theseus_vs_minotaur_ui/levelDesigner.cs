@@ -13,6 +13,8 @@ namespace Theseus_vs_minotaur_ui
     public partial class levelDesigner : Form
     {
         Graphics paper;
+        
+                
 
         public levelDesigner()
         {
@@ -39,17 +41,19 @@ namespace Theseus_vs_minotaur_ui
 
         private void drawGrid()
         {
-            int numOfCellsV = 7;
-            int numOfCellsH = 10;
-            int cellSizeV = 300 / numOfCellsV;
-            int cellSizeH = 300 / numOfCellsH;
+            int width = this.pictureBox1.Width;
+            int height = this.pictureBox1.Height;
+            int numOfCellsV = 3;
+            int numOfCellsH = 5;
+            int cellSizeV = height / numOfCellsV;
+            int cellSizeH = width / numOfCellsH;
             Pen p = new Pen(Color.Blue);
             paper.Clear(Color.White);
 
             for (int i = 0; i < numOfCellsH; i++)
             {
                 // Vertical
-                paper.DrawLine(p, i * cellSizeH, 0, i * cellSizeH, numOfCellsV * cellSizeH);       
+                paper.DrawLine(p, i * cellSizeH, 0, i * cellSizeH, 300);       
             }
 
             for (int i = 0; i < numOfCellsV; i++)

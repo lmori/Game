@@ -25,7 +25,7 @@ namespace Theseus_vs_Minotaur_library
 
     }
 
-    class Theseus : Character
+  /*  class Theseus : Character
     {
         public bool Move (int newXPosition, int newYPosition)
         {
@@ -37,7 +37,7 @@ namespace Theseus_vs_Minotaur_library
 
             return true;
         }
-    }
+    } */
 
     class Minotaur : Character
     {
