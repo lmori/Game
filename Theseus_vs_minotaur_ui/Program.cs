@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Theseus_vs_Minotaur_library;
 
-namespace Theseus_vs_Minotaur_library
+
+namespace Theseus_vs_minotaur_ui
 {
     static class Program
     {
@@ -16,8 +18,9 @@ namespace Theseus_vs_Minotaur_library
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new START());
-            Application.Run(new LOGIN());
+            //Application.Run(new START());
+            //Application.Run(new LOGIN());
+            Application.Run(new Form1());
         }
     }
 }
