@@ -45,19 +45,23 @@ namespace Theseus_vs_minotaur_ui
                 HorWalls = new Rectangle[numOfCellsV, numOfCellsH - 1];
                 Hor = new Boolean[numOfCellsV, numOfCellsH - 1];
                 Ver = new Boolean[numOfCellsV - 1, numOfCellsH];
+                int width = this.pictureBox1.Width;
+                int height = this.pictureBox1.Height;
+                int cellSizeV = height / numOfCellsV;
+                int cellSizeH = width / numOfCellsH;
                 for (int j = 0; j < numOfCellsH; j++)
                 {
                     for (int i = 0; i < numOfCellsV - 1; i++)
                     {
-                        VerWalls[i, j] = new Rectangle(65 + i * 70, j * 70, 10, 70);
+                        VerWalls[i, j] = new Rectangle(cellSizeV + i * cellSizeV, j * cellSizeH, 10, cellSizeH);
                         Ver[i, j] = false;
                     }
                 }
-                for (int j = 0; j < numOfCellsH - 1; j++)
+               for (int j = 0; j < numOfCellsH - 1; j++)
                 {
                     for (int i = 0; i < numOfCellsV; i++)
                     {
-                        HorWalls[i, j] = new Rectangle(i * 70, 65 + j * 70, 70, 10);
+                        HorWalls[i, j] = new Rectangle(i * cellSizeV, cellSizeH + j * cellSizeH, cellSizeV, 10);
                         Hor[i, j] = false;
                     }
                 }

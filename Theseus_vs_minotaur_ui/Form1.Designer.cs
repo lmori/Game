@@ -39,10 +39,9 @@
             // 
             // exit
             // 
-            this.exit.Location = new System.Drawing.Point(920, 748);
-            this.exit.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.exit.Location = new System.Drawing.Point(690, 648);
             this.exit.Name = "exit";
-            this.exit.Size = new System.Drawing.Size(100, 27);
+            this.exit.Size = new System.Drawing.Size(75, 23);
             this.exit.TabIndex = 0;
             this.exit.Text = "exit";
             this.exit.UseVisualStyleBackColor = true;
@@ -50,10 +49,9 @@
             // 
             // createNewProject
             // 
-            this.createNewProject.Location = new System.Drawing.Point(71, 748);
-            this.createNewProject.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.createNewProject.Location = new System.Drawing.Point(53, 648);
             this.createNewProject.Name = "createNewProject";
-            this.createNewProject.Size = new System.Drawing.Size(100, 27);
+            this.createNewProject.Size = new System.Drawing.Size(75, 23);
             this.createNewProject.TabIndex = 1;
             this.createNewProject.Text = "New Project";
             this.createNewProject.UseVisualStyleBackColor = true;
@@ -61,41 +59,37 @@
             // 
             // save
             // 
-            this.save.Location = new System.Drawing.Point(279, 748);
-            this.save.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.save.Location = new System.Drawing.Point(209, 648);
             this.save.Name = "save";
-            this.save.Size = new System.Drawing.Size(100, 27);
+            this.save.Size = new System.Drawing.Size(75, 23);
             this.save.TabIndex = 2;
             this.save.Text = "Save";
             this.save.UseVisualStyleBackColor = true;
             // 
             // export
             // 
-            this.export.Location = new System.Drawing.Point(688, 748);
-            this.export.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.export.Location = new System.Drawing.Point(516, 648);
             this.export.Name = "export";
-            this.export.Size = new System.Drawing.Size(100, 27);
+            this.export.Size = new System.Drawing.Size(75, 23);
             this.export.TabIndex = 3;
             this.export.Text = "Export";
             this.export.UseVisualStyleBackColor = true;
             // 
             // import
             // 
-            this.import.Location = new System.Drawing.Point(469, 748);
-            this.import.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.import.Location = new System.Drawing.Point(352, 648);
             this.import.Name = "import";
-            this.import.Size = new System.Drawing.Size(100, 27);
+            this.import.Size = new System.Drawing.Size(75, 23);
             this.import.TabIndex = 4;
             this.import.Text = "Import";
             this.import.UseVisualStyleBackColor = true;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(245, 21);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(184, 18);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Padding = new System.Windows.Forms.Padding(1);
-            this.pictureBox1.Size = new System.Drawing.Size(700, 700);
+            this.pictureBox1.Size = new System.Drawing.Size(500, 500);
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBox1_Paint);
@@ -103,16 +97,15 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1189, 796);
+            this.ClientSize = new System.Drawing.Size(911, 680);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.import);
             this.Controls.Add(this.export);
             this.Controls.Add(this.save);
             this.Controls.Add(this.createNewProject);
             this.Controls.Add(this.exit);
-            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "Form1";
             this.Text = "levelDesigner";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
