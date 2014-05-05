@@ -94,7 +94,7 @@
             this.pictureBox1.Location = new System.Drawing.Point(39, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Padding = new System.Windows.Forms.Padding(1);
-            this.pictureBox1.Size = new System.Drawing.Size(708, 661);
+            this.pictureBox1.Size = new System.Drawing.Size(600, 600);
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.DragDrop += new System.Windows.Forms.DragEventHandler(this.pictureBox1_DragDrop);

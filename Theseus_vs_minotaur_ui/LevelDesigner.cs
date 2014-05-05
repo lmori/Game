@@ -89,12 +89,14 @@ namespace Theseus_vs_minotaur_ui
             Pen bb = new Pen(Color.Blue, 10);
             Brush blue = new SolidBrush(Color.Blue);
             g.Clear(Color.White);
+            int width = this.pictureBox1.Width;
+            int height = this.pictureBox1.Height;
             if (isCreated)
             {
-                g.DrawLine(bb, 4, 4, 696, 4);
-                g.DrawLine(bb, 696, 4, 696, 696);
-                g.DrawLine(bb, 696, 696, 4, 696);
-                g.DrawLine(bb, 4, 696, 4, 4);
+                g.DrawLine(bb, 0, 0, width, 0); // 696 is the length of the sides
+                g.DrawLine(bb, width, 0, width, height);
+                g.DrawLine(bb, width, height, 0, height);
+                g.DrawLine(bb, 0, height, 0, 0);
 
                 for (int j = 0; j < numOfCellsH; j++)
                 {
