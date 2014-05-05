@@ -27,7 +27,7 @@ namespace Theseus_vs_Minotaur_library
     }
 
     class Theseus : Character
-    {        
+    {      /*  
         public bool Move (Direction direction)
         {
             // define variables
@@ -78,11 +78,11 @@ namespace Theseus_vs_Minotaur_library
             }
 
             
-        }
+        } */
     }
 
     class Minotaur : Character
-    {
+    {/*
        
         public int[][] Move () // The Minotaur always moves twice so method returns an array with two sets of xy ints
         {
@@ -171,6 +171,6 @@ namespace Theseus_vs_Minotaur_library
             }
 
             return minotaurMoves;
-        }
+        }*/
     }
 }
