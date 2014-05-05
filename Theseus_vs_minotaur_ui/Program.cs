@@ -18,9 +18,9 @@ namespace Theseus_vs_minotaur_ui
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new START());
-            //Application.Run(new LOGIN());
-            Application.Run(new Form1());
+            Application.Run(new START());
+            Application.Run(new LOGIN());
+            //Application.Run(new Form1());
         }
     }
 }

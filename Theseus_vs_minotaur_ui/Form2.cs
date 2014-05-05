@@ -31,5 +31,10 @@ namespace Theseus_vs_minotaur_ui
             cancelled = true;
             this.Close();
         }
+
+        private void NewProject_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

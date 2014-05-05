@@ -19,11 +19,11 @@ namespace Theseus_vs_Minotaur_library
 
 
         private UserList users;
-        private List<Level> levels;
+       // private List<Level> levels;
 
         private Dictionary<String, int> levelDictionary;
 
-        public IDictionary<String, int> LevelDictionary
+        public Dictionary<String, int> LevelDictionary
         {
             get { return levelDictionary; }
 
@@ -37,7 +37,7 @@ namespace Theseus_vs_Minotaur_library
         {
 
             users = new UserList();
-            levels = new List<Level>();
+            //levels = new List<Level>();
             levelDictionary = new Dictionary<String, int>();
 
         }
@@ -49,10 +49,11 @@ namespace Theseus_vs_Minotaur_library
             return users;
         }
 
-        public IList<Level> getLevels()
+        public Dictionary<String, int> getLevels()
         {
-            return levels;
+            return levelDictionary;
         }
+
 
         public void CreateUser(String name)
         {
@@ -132,7 +133,32 @@ namespace Theseus_vs_Minotaur_library
 
         }
 
+        public void SerializeLevelsToXML()
+        {
 
+            XmlSerializer serializer = new XmlSerializer(levelDictionary.GetType()); // getting the users 
+            serializer.Serialize(new StreamWriter(@"h:\levels.xml"), levelDictionary); // adding values to xml file
+            Console.WriteLine(levelDictionary);
+
+        }
+
+        public Dictionary<String, int> deserializeLevelsFromXML()// get levels from xml file
+        {
+
+            var level = new Dictionary<String, int>();
+
+            XmlSerializer deserializer = new XmlSerializer(typeof(Level));
+            using (StreamReader textReader = new StreamReader(@"h:\users.xml"))
+            {
+                level = (Dictionary<String, int>)deserializer.Deserialize(textReader);
+
+                textReader.Close();
+
+
+            }
+
+            return level;
+        }
     }
 
 }

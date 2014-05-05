@@ -8,7 +8,7 @@ namespace Theseus_vs_Minotaur_library
 {
     class GameController
     {
-        Level currentLevel = new Level(); //requires instance?
+       // Level currentLevel = new Level(); //requires instance?
         Theseus myTheseus;
         Minotaur myMinotaur;
 
