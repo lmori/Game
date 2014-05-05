@@ -15,8 +15,15 @@ namespace Theseus_vs_minotaur_ui
     {
         //GameController myGameController for future use ;
         Level myTestingLevel; //for test purposes
+        
+        //initialize the 
         int cellHeight;
         int cellWidth;
+        
+        //set the pixel width for walls
+        int wallWidth = 5;
+
+        private Bitmap wallsAndExit;
         
 
         public GamePlayForm(Level testLevel)
@@ -28,58 +35,76 @@ namespace Theseus_vs_minotaur_ui
 
         private void GamePlayForm_Load(object sender, EventArgs e)
         {
-            cellWidth = ((this.pnlGameBoard.Width - 10 * myTestingLevel.GridSize[0]) / myTestingLevel.GridSize[0]);
-            cellHeight = ((this.pnlGameBoard.Height - 10 * myTestingLevel.GridSize[1]) / myTestingLevel.GridSize[1]);
-            
+            cellWidth = ((this.pnlGameBoard.Width - wallWidth) / myTestingLevel.GridSize[0]);
+            cellHeight = ((this.pnlGameBoard.Height - wallWidth) / myTestingLevel.GridSize[1]);
+            DrawWallsAndExit();
         }
 
         private void pnlGameBoard_Paint(object sender, PaintEventArgs e)
         {
-            System.Drawing.Pen myPen;
-            myPen = new System.Drawing.Pen(System.Drawing.Color.Red);
-            myPen.Width = 10;
-            System.Drawing.Graphics formGraphics = this.pnlGameBoard.CreateGraphics();
-           //Rectangle r = new Rectangle(5, 5, 50, 50);
-          //  formGraphics.DrawRectangle(myPen, r);
-            //formGraphics.DrawLine(myPen,0,0,cellWidth,0);
-           // formGraphics.DrawLine(myPen, 0, 0, , );
-            int xposition = 5;
-            int yposition = 5;
-            for (int i = 0; i < myTestingLevel.HorizontalWallArray.Length; i++)
+
+            Graphics graphicsObj = e.Graphics;
+            graphicsObj.DrawImage(wallsAndExit, 0, 0, wallsAndExit.Width, wallsAndExit.Height);
+            graphicsObj.DrawImage(wallsAndExit, 0, 0, wallsAndExit.Width, wallsAndExit.Height);
+            graphicsObj.Dispose();        
+        }
+
+        private void DrawWallsAndExit()
+        {
+
+            Graphics graphicsObj;
+            wallsAndExit = new Bitmap(this.pnlGameBoard.Width, this.pnlGameBoard.Height, 
+                                        System.Drawing.Imaging.PixelFormat.Format24bppRgb);
+            graphicsObj = Graphics.FromImage(wallsAndExit);
+            graphicsObj.Clear(Color.White);
+            Brush wallBrush = new SolidBrush(Color.Black);
+            Brush gapBrush = new SolidBrush(Color.LightGray);
+            Rectangle lineRect;
+
+            int xposition = 0;
+            int yposition = 0;
+            foreach (bool[] wallArray in myTestingLevel.VerticalWallArray)
             {
-                xposition = 5;
-                for (int j = 0; j < myTestingLevel.HorizontalWallArray[i].Length; j++ )
+                xposition = 0;
+                foreach (bool wall in wallArray)
                 {
-                    
-                    formGraphics.DrawLine(myPen, xposition, yposition, xposition + cellWidth, yposition);
+                    int height = yposition + cellHeight;
+                    lineRect = new Rectangle(xposition, yposition, wallWidth, height);
+                    if (wall == true)
+                    {
+                        graphicsObj.FillRectangle(wallBrush, lineRect);
+                    }
+                    else
+                    {
+                        graphicsObj.FillRectangle(gapBrush, lineRect);
+                    }
                     xposition += cellWidth;
                 }
                 yposition += cellHeight;
             }
-
-            xposition = 5;
-            yposition = 5;
-            for (int i = 0; i < myTestingLevel.VerticalWallArray.Length; i++)
+            yposition = 0;
+            foreach (bool[] wallArray in myTestingLevel.HorizontalWallArray)
             {
-                yposition = 5;
-                for (int j = 0; j < myTestingLevel.VerticalWallArray[i].Length; j++)
+                xposition = wallWidth;
+                foreach (bool wall in wallArray)
                 {
-
-                    formGraphics.DrawLine(myPen, xposition, yposition, xposition, yposition + cellHeight);
-                    yposition += cellHeight;
+                    int width = xposition + cellWidth;
+                    lineRect = new Rectangle(xposition, yposition, width, wallWidth);
+                    if (wall == true)
+                    {
+                        graphicsObj.FillRectangle(wallBrush, lineRect);
+                    }
+                    else
+                    {
+                        graphicsObj.FillRectangle(gapBrush, lineRect);
+                    }
+                    xposition += cellWidth;
                 }
-                xposition += cellWidth;
+                yposition += cellHeight;
             }
-
-
-            
+            graphicsObj.Dispose();
         }
-
-        private void GamePlayForm_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
+        
 
     }
 }

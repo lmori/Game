@@ -344,20 +344,18 @@
             // 
             // GamePlayForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(784, 726);
             this.Controls.Add(this.pnlGameBoard);
             this.Controls.Add(this.pnlGameControls);
             this.Controls.Add(this.pnlMenuControls);
             this.Controls.Add(this.pnlScoreTimer);
             this.Controls.Add(this.pnlTitle);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "GamePlayForm";
             this.Text = "Theseus vs The Minotaur";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.GamePlayForm_Load);
-            this.Paint += new System.Windows.Forms.PaintEventHandler(this.GamePlayForm_Paint);
             this.pnlTitle.ResumeLayout(false);
             this.pnlTitle.PerformLayout();
             this.pnlScoreTimer.ResumeLayout(false);
