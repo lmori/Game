@@ -6,33 +6,54 @@ using System.Threading.Tasks;
 
 namespace Theseus_vs_Minotaur_library
 {
-    class GameController
+    public class GameController
     {
-        Level currentLevel = new Level(); //requires instance?
-        Theseus myTheseus;
-        Minotaur myMinotaur;
-
+        private StorageController myStorageController;
+        private Level currentLevel;
+        private Theseus myTheseus;
+        private Minotaur myMinotaur;
+        private User myCurrentUser;
+        private float timer;
         List<Direction> moveList = new List<Direction>();
-        float timer;
 
+    
 
+        public void LogMove(Direction direction)
+        {
+            moveList.Add(direction);
+        }
+                
+        public Level CurrentLevel
+        {
+            get { return currentLevel; }
+            set { currentLevel = value; }
+        }
+       
+        public Theseus MyTheseus
+        {
+            get { return myTheseus; }
+            set { myTheseus = value; }
+        }
 
+        public Minotaur MyMinotaur
+        {
+            get { return myMinotaur; }
+            set { myMinotaur = value; }
+        }
+
+        public User MyCurrentUser
+        {
+            get { return myCurrentUser; }
+            set { myCurrentUser = value; }
+        }
+       
         public float Timer
         {
             get { return timer; }
             set { timer = value; }
         }
 
-        public Level CurrentLevel
-        {
-            get { return currentLevel; }
-            set { currentLevel = value; }
-        }
 
-        public void LogMove(Direction direction)
-        {
-            this.moveList.Add(direction);
-        }
     }
 
     public enum Direction

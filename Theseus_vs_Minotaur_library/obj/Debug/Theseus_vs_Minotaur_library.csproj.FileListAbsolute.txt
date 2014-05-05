@@ -15,3 +15,13 @@ C:\Game\Theseus_vs_Minotaur_library\bin\Debug\Theseus_vs_Minotaur_library.pdb
 C:\Game\Theseus_vs_Minotaur_library\obj\Debug\Theseus_vs_Minotaur_library.csprojResolveAssemblyReference.cache
 C:\Game\Theseus_vs_Minotaur_library\obj\Debug\Theseus_vs_Minotaur_library.dll
 C:\Game\Theseus_vs_Minotaur_library\obj\Debug\Theseus_vs_Minotaur_library.pdb
+H:\Snake\game\Theseus_vs_Minotaur_library\obj\Debug\Theseus_vs_Minotaur_library.csprojResolveAssemblyReference.cache
+H:\Snake\game\Theseus_vs_Minotaur_library\obj\Debug\Theseus_vs_Minotaur_library.dll
+H:\Snake\game\Theseus_vs_Minotaur_library\bin\Debug\Theseus_vs_Minotaur_library.dll
+H:\Snake\game\Theseus_vs_Minotaur_library\bin\Debug\Theseus_vs_Minotaur_library.pdb
+H:\Snake\game\Theseus_vs_Minotaur_library\obj\Debug\Theseus_vs_Minotaur_library.pdb
+H:\TvM\game\Theseus_vs_Minotaur_library\obj\Debug\Theseus_vs_Minotaur_library.csprojResolveAssemblyReference.cache
+H:\TvM\game\Theseus_vs_Minotaur_library\obj\Debug\Theseus_vs_Minotaur_library.dll
+H:\TvM\game\Theseus_vs_Minotaur_library\obj\Debug\Theseus_vs_Minotaur_library.pdb
+H:\TvM\game\Theseus_vs_Minotaur_library\bin\Debug\Theseus_vs_Minotaur_library.dll
+H:\TvM\game\Theseus_vs_Minotaur_library\bin\Debug\Theseus_vs_Minotaur_library.pdb
