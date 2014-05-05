@@ -36,7 +36,7 @@ namespace Theseus_vs_minotaur_ui
 
         private void createNewProject_Click(object sender, EventArgs e)
         {
-            NewProject newForm = new NewProject();
+            NewProject newForm = new NewProject();//Brings up form to put in name, grid size for new level
             newForm.ShowDialog();
             if (!newForm.cancelled)
             {
@@ -159,9 +159,19 @@ namespace Theseus_vs_minotaur_ui
             pictureBox1.Image = (Image)e.Data.GetData(DataFormats.Bitmap);
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void Form1_Load(object sender, EventArgs e) //Bring up a list of all users saved levels
         {
             pictureBox1.AllowDrop = true;
+        }
+
+        private void save_Click(object sender, EventArgs e) //will bring up form for saving finished and unfinished levels
+        {
+
+        }
+
+        private void export_Click(object sender, EventArgs e) //Will probably get rid of this button and just use save_Click instead
+        {
+
         }
     }
 }

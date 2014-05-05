@@ -88,3 +88,6 @@ C:\Users\paul\Documents\GitHub\Game\Theseus_vs_minotaur_ui\obj\Debug\Theseus_vs_
 C:\Users\paul\Documents\GitHub\Game\Theseus_vs_minotaur_ui\obj\Debug\Theseus_vs_minotaur_ui.LevelDesigner.resources
 C:\Users\paul\Documents\GitHub\Game\Theseus_vs_minotaur_ui\obj\Debug\Theseus_vs_minotaur_ui.SaveLevel.resources
 C:\Users\paul\Documents\GitHub\Game\Theseus_vs_minotaur_ui\obj\Debug\Theseus_vs_minotaur_ui.ImportLevel.resources
+C:\projects\Game\Theseus_vs_minotaur_ui\bin\Debug\Theseus_vs_minotaur_ui.exe.config
+C:\projects\Game\Theseus_vs_minotaur_ui\obj\Debug\Theseus_vs_minotaur_ui.exe
+C:\projects\Game\Theseus_vs_minotaur_ui\obj\Debug\Theseus_vs_minotaur_ui.pdb
