@@ -20,7 +20,7 @@ namespace Theseus_vs_minotaur_ui
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new START());
             //Application.Run(new LOGIN());
-            Application.Run(new LevelDesigner());
+            Application.Run(new SaveLevel());
         }
     }
 }
