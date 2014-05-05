@@ -15,15 +15,17 @@ namespace Theseus_vs_Minotaur_library
     [Serializable]
     public class StorageController : IStorageManagement
     {
-        //private StorageController storage;
+        
 
 
         private UserList users;
+
+        private Level lev;
        // private List<Level> levels;
 
-        private Dictionary<String, int> levelDictionary;
+        private Dictionary<String, Level> levelDictionary;
 
-        public Dictionary<String, int> LevelDictionary
+        public Dictionary<String, Level> LevelDictionary
         {
             get { return levelDictionary; }
 
@@ -38,7 +40,7 @@ namespace Theseus_vs_Minotaur_library
 
             users = new UserList();
             //levels = new List<Level>();
-            levelDictionary = new Dictionary<String, int>();
+            levelDictionary = new Dictionary<String, Level>();
 
         }
 
@@ -49,7 +51,7 @@ namespace Theseus_vs_Minotaur_library
             return users;
         }
 
-        public Dictionary<String, int> getLevels()
+        public Dictionary<String, Level> getLevels()
         {
             return levelDictionary;
         }
@@ -106,6 +108,19 @@ namespace Theseus_vs_Minotaur_library
             SerializeToXML();
         }
 
+
+        public void getLevel()
+        {
+            //get level file from the current root directory
+
+            //currentRootLocation/levels/playable/<levelID>.lvl
+
+            //deserialize the level file into a level object
+
+
+            //return the level object
+        }
+
         public bool isUserValid(string userInput)
         {
 
@@ -141,6 +156,35 @@ namespace Theseus_vs_Minotaur_library
             Console.WriteLine(levelDictionary);
 
         }
+        public void SaveLevel(String fileName, String levelName, String creatorName, int minotaurXPosition, int minotaurYPosition,
+                    int theseusXPosition, int theseusYPosition, bool[][] verticalWallArray, bool[][] horizontalWallArray, int[] gridSize, bool levelFinished)
+         {
+            //file name is the same as the level name
+
+             Level lev = new Level(fileName, levelName, creatorName, minotaurXPosition, minotaurYPosition, theseusXPosition, theseusYPosition, 
+                 verticalWallArray, horizontalWallArray, gridSize, levelFinished);
+
+            lev.FileName = fileName;
+           lev.LevelName = levelName ;
+           lev.CreatorName = creatorName;
+            lev.MinotaurXPosition = minotaurXPosition;
+            lev.TheseusXPosition = theseusXPosition;
+            lev.MinotaurYPosition = minotaurYPosition;
+            lev.TheseusYPosition = theseusYPosition;
+            lev.VerticalWallArray = verticalWallArray;
+            lev.HorizontalWallArray = horizontalWallArray;
+
+            lev.GridSize = gridSize;
+            lev.IsLevelFinished = levelFinished;
+           
+            // add level to dictionary
+            levelDictionary.Add(levelName,lev);
+
+            SerializeLevelsToXML();
+
+
+
+         }
 
         public Dictionary<String, int> deserializeLevelsFromXML()// get levels from xml file
         {
@@ -153,10 +197,7 @@ namespace Theseus_vs_Minotaur_library
                 level = (Dictionary<String, int>)deserializer.Deserialize(textReader);
 
                 textReader.Close();
-
-
             }
-
             return level;
         }
     }

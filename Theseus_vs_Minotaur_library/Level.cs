@@ -44,6 +44,16 @@ namespace Theseus_vs_Minotaur_library
         private int[] gridSize;
         [XmlElement(ElementName = "Grid Size")]
 
+
+        private bool isLevelFinished;
+
+
+        public bool IsLevelFinished
+        {
+          get { return isLevelFinished; }
+          set { isLevelFinished = value; }
+        }
+
         public string FileName
         {
             get { return fileName; }
@@ -105,7 +115,7 @@ namespace Theseus_vs_Minotaur_library
         }
 
         public Level(String fileName, String levelName, String creatorName, int minotaurXPosition, int minotaurYPosition,
-                    int theseusXPosition, int theseusYPosition, bool[][] verticalWallArray, bool[][] horizontalWallArray, int[] gridSize)
+                    int theseusXPosition, int theseusYPosition, bool[][] verticalWallArray, bool[][] horizontalWallArray, int[] gridSize, bool levelFinished)
         {
             FileName = fileName;
             LevelName = levelName;
@@ -117,7 +127,10 @@ namespace Theseus_vs_Minotaur_library
             VerticalWallArray = verticalWallArray;
             HorizontalWallArray = horizontalWallArray;
             GridSize = gridSize;
+            isLevelFinished = levelFinished;
         }
+
+       
 
         //renamed the method from "CanMove" to "IsWall". Changed the parameters it takes
         //from "oldXPosition.." to column and "oldYPosition" to "row"
@@ -128,8 +141,6 @@ namespace Theseus_vs_Minotaur_library
             int innerArray, innerArrayIndex;
             bool[][] outerArray;
             bool result = false;
-
-
             switch (direction)
             {
                 case Direction.Right:

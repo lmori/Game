@@ -13,6 +13,8 @@ namespace Theseus_vs_minotaur_ui
 {
     public partial class Form1 : Form
     {
+        private StorageController storage;
+
         int numOfCellsV = 0;
         int numOfCellsH = 0;
         Boolean isCreated = false;
@@ -122,7 +124,7 @@ namespace Theseus_vs_minotaur_ui
 
         private void export_Click(object sender, EventArgs e)
         {
-          
+            storage.SerializeLevelsToXML();
         }
     }
 }
