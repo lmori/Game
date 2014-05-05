@@ -123,5 +123,25 @@ namespace Theseus_vs_minotaur_ui
             }  
             pictureBox1.Invalidate();
         }
+
+        private void pictureBox2_MouseDown(object sender, MouseEventArgs e)
+        {
+            pictureBox2.DoDragDrop(pictureBox2.Image, DragDropEffects.Copy);
+        }
+
+        private void pictureBox1_DragEnter(object sender, DragEventArgs e)
+        {
+            e.Effect = DragDropEffects.Copy;
+        }
+
+        private void pictureBox1_DragDrop(object sender, DragEventArgs e)
+        {
+            pictureBox1.Image = (Image)e.Data.GetData(DataFormats.Bitmap);
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            pictureBox1.AllowDrop = true;
+        }
     }
 }
