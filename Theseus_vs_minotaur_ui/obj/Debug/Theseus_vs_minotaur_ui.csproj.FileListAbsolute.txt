@@ -87,3 +87,4 @@ C:\Users\paul\Documents\GitHub\Game\Theseus_vs_minotaur_ui\obj\Debug\Theseus_vs_
 C:\Users\paul\Documents\GitHub\Game\Theseus_vs_minotaur_ui\obj\Debug\Theseus_vs_minotaur_ui.csproj.GenerateResource.Cache
 C:\Users\paul\Documents\GitHub\Game\Theseus_vs_minotaur_ui\obj\Debug\Theseus_vs_minotaur_ui.LevelDesigner.resources
 C:\Users\paul\Documents\GitHub\Game\Theseus_vs_minotaur_ui\obj\Debug\Theseus_vs_minotaur_ui.SaveLevel.resources
+C:\Users\paul\Documents\GitHub\Game\Theseus_vs_minotaur_ui\obj\Debug\Theseus_vs_minotaur_ui.ImportLevel.resources
