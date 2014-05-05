@@ -36,31 +36,31 @@
             this.btnMainMenu = new System.Windows.Forms.Button();
             this.lblUserName = new System.Windows.Forms.Label();
             this.pnlLevel1 = new System.Windows.Forms.Panel();
-            this.imgLevelPreview1 = new System.Windows.Forms.PictureBox();
-            this.imgLevelDone1 = new System.Windows.Forms.PictureBox();
-            this.lblLevelDifficulty1 = new System.Windows.Forms.Label();
-            this.pnlStarRating1 = new System.Windows.Forms.Panel();
             this.lblLevelName1 = new System.Windows.Forms.Label();
+            this.pnlStarRating1 = new System.Windows.Forms.Panel();
+            this.lblLevelDifficulty1 = new System.Windows.Forms.Label();
+            this.imgLevelDone1 = new System.Windows.Forms.PictureBox();
+            this.imgLevelPreview1 = new System.Windows.Forms.PictureBox();
             this.pnlAllLevelsRow1 = new System.Windows.Forms.Panel();
-            this.pnlLevel2 = new System.Windows.Forms.Panel();
-            this.lblLevelName2 = new System.Windows.Forms.Label();
-            this.pnlStarRating2 = new System.Windows.Forms.Panel();
-            this.lblLevelDifficulty2 = new System.Windows.Forms.Label();
-            this.imgLevelDone2 = new System.Windows.Forms.PictureBox();
-            this.imgLevelPreview2 = new System.Windows.Forms.PictureBox();
-            this.pnlLevel3 = new System.Windows.Forms.Panel();
-            this.lblLevelName3 = new System.Windows.Forms.Label();
-            this.pnlStarRating3 = new System.Windows.Forms.Panel();
-            this.lblLevelDifficulty3 = new System.Windows.Forms.Label();
-            this.imgLevelDone3 = new System.Windows.Forms.PictureBox();
-            this.imgLevelPreview3 = new System.Windows.Forms.PictureBox();
-            this.btnNextLevels = new System.Windows.Forms.Button();
             this.pnlLevel4 = new System.Windows.Forms.Panel();
             this.lblLevelName4 = new System.Windows.Forms.Label();
             this.pnlStarRating4 = new System.Windows.Forms.Panel();
             this.lblLevelDifficulty4 = new System.Windows.Forms.Label();
             this.imgLevelDone4 = new System.Windows.Forms.PictureBox();
             this.imgLevelPreview4 = new System.Windows.Forms.PictureBox();
+            this.pnlLevel3 = new System.Windows.Forms.Panel();
+            this.lblLevelName3 = new System.Windows.Forms.Label();
+            this.pnlStarRating3 = new System.Windows.Forms.Panel();
+            this.lblLevelDifficulty3 = new System.Windows.Forms.Label();
+            this.imgLevelDone3 = new System.Windows.Forms.PictureBox();
+            this.imgLevelPreview3 = new System.Windows.Forms.PictureBox();
+            this.pnlLevel2 = new System.Windows.Forms.Panel();
+            this.lblLevelName2 = new System.Windows.Forms.Label();
+            this.pnlStarRating2 = new System.Windows.Forms.Panel();
+            this.lblLevelDifficulty2 = new System.Windows.Forms.Label();
+            this.imgLevelDone2 = new System.Windows.Forms.PictureBox();
+            this.imgLevelPreview2 = new System.Windows.Forms.PictureBox();
+            this.btnNextLevels = new System.Windows.Forms.Button();
             this.pnlAllLevelsRow2 = new System.Windows.Forms.Panel();
             this.pnlLevel8 = new System.Windows.Forms.Panel();
             this.lblLevelName8 = new System.Windows.Forms.Label();
@@ -88,18 +88,18 @@
             this.imgLevelPreview5 = new System.Windows.Forms.PictureBox();
             this.btnPreviousLevels = new System.Windows.Forms.Button();
             this.pnlLevel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.imgLevelPreview1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgLevelDone1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgLevelPreview1)).BeginInit();
             this.pnlAllLevelsRow1.SuspendLayout();
-            this.pnlLevel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.imgLevelDone2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgLevelPreview2)).BeginInit();
-            this.pnlLevel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.imgLevelDone3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgLevelPreview3)).BeginInit();
             this.pnlLevel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgLevelDone4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgLevelPreview4)).BeginInit();
+            this.pnlLevel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imgLevelDone3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgLevelPreview3)).BeginInit();
+            this.pnlLevel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imgLevelDone2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgLevelPreview2)).BeginInit();
             this.pnlAllLevelsRow2.SuspendLayout();
             this.pnlLevel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgLevelDone8)).BeginInit();
@@ -213,22 +213,22 @@
             this.pnlLevel1.Size = new System.Drawing.Size(278, 347);
             this.pnlLevel1.TabIndex = 8;
             // 
-            // imgLevelPreview1
+            // lblLevelName1
             // 
-            this.imgLevelPreview1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.imgLevelPreview1.Location = new System.Drawing.Point(39, 61);
-            this.imgLevelPreview1.Name = "imgLevelPreview1";
-            this.imgLevelPreview1.Size = new System.Drawing.Size(200, 200);
-            this.imgLevelPreview1.TabIndex = 0;
-            this.imgLevelPreview1.TabStop = false;
+            this.lblLevelName1.AutoSize = true;
+            this.lblLevelName1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLevelName1.Location = new System.Drawing.Point(37, 303);
+            this.lblLevelName1.Name = "lblLevelName1";
+            this.lblLevelName1.Size = new System.Drawing.Size(177, 29);
+            this.lblLevelName1.TabIndex = 4;
+            this.lblLevelName1.Text = "<LevelName1>";
             // 
-            // imgLevelDone1
+            // pnlStarRating1
             // 
-            this.imgLevelDone1.Location = new System.Drawing.Point(220, 15);
-            this.imgLevelDone1.Name = "imgLevelDone1";
-            this.imgLevelDone1.Size = new System.Drawing.Size(40, 40);
-            this.imgLevelDone1.TabIndex = 1;
-            this.imgLevelDone1.TabStop = false;
+            this.pnlStarRating1.Location = new System.Drawing.Point(38, 267);
+            this.pnlStarRating1.Name = "pnlStarRating1";
+            this.pnlStarRating1.Size = new System.Drawing.Size(200, 33);
+            this.pnlStarRating1.TabIndex = 3;
             // 
             // lblLevelDifficulty1
             // 
@@ -240,22 +240,22 @@
             this.lblLevelDifficulty1.TabIndex = 2;
             this.lblLevelDifficulty1.Text = "<LevelDifficulty1>";
             // 
-            // pnlStarRating1
+            // imgLevelDone1
             // 
-            this.pnlStarRating1.Location = new System.Drawing.Point(38, 267);
-            this.pnlStarRating1.Name = "pnlStarRating1";
-            this.pnlStarRating1.Size = new System.Drawing.Size(200, 33);
-            this.pnlStarRating1.TabIndex = 3;
+            this.imgLevelDone1.Location = new System.Drawing.Point(220, 15);
+            this.imgLevelDone1.Name = "imgLevelDone1";
+            this.imgLevelDone1.Size = new System.Drawing.Size(40, 40);
+            this.imgLevelDone1.TabIndex = 1;
+            this.imgLevelDone1.TabStop = false;
             // 
-            // lblLevelName1
+            // imgLevelPreview1
             // 
-            this.lblLevelName1.AutoSize = true;
-            this.lblLevelName1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLevelName1.Location = new System.Drawing.Point(37, 303);
-            this.lblLevelName1.Name = "lblLevelName1";
-            this.lblLevelName1.Size = new System.Drawing.Size(177, 29);
-            this.lblLevelName1.TabIndex = 4;
-            this.lblLevelName1.Text = "<LevelName1>";
+            this.imgLevelPreview1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.imgLevelPreview1.Location = new System.Drawing.Point(39, 61);
+            this.imgLevelPreview1.Name = "imgLevelPreview1";
+            this.imgLevelPreview1.Size = new System.Drawing.Size(200, 200);
+            this.imgLevelPreview1.TabIndex = 0;
+            this.imgLevelPreview1.TabStop = false;
             // 
             // pnlAllLevelsRow1
             // 
@@ -270,62 +270,62 @@
             this.pnlAllLevelsRow1.Size = new System.Drawing.Size(1165, 372);
             this.pnlAllLevelsRow1.TabIndex = 9;
             // 
-            // pnlLevel2
+            // pnlLevel4
             // 
-            this.pnlLevel2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pnlLevel2.Controls.Add(this.lblLevelName2);
-            this.pnlLevel2.Controls.Add(this.pnlStarRating2);
-            this.pnlLevel2.Controls.Add(this.lblLevelDifficulty2);
-            this.pnlLevel2.Controls.Add(this.imgLevelDone2);
-            this.pnlLevel2.Controls.Add(this.imgLevelPreview2);
-            this.pnlLevel2.Location = new System.Drawing.Point(301, 12);
-            this.pnlLevel2.Name = "pnlLevel2";
-            this.pnlLevel2.Size = new System.Drawing.Size(278, 347);
-            this.pnlLevel2.TabIndex = 9;
+            this.pnlLevel4.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pnlLevel4.Controls.Add(this.lblLevelName4);
+            this.pnlLevel4.Controls.Add(this.pnlStarRating4);
+            this.pnlLevel4.Controls.Add(this.lblLevelDifficulty4);
+            this.pnlLevel4.Controls.Add(this.imgLevelDone4);
+            this.pnlLevel4.Controls.Add(this.imgLevelPreview4);
+            this.pnlLevel4.Location = new System.Drawing.Point(869, 12);
+            this.pnlLevel4.Name = "pnlLevel4";
+            this.pnlLevel4.Size = new System.Drawing.Size(278, 347);
+            this.pnlLevel4.TabIndex = 10;
             // 
-            // lblLevelName2
+            // lblLevelName4
             // 
-            this.lblLevelName2.AutoSize = true;
-            this.lblLevelName2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLevelName2.Location = new System.Drawing.Point(37, 303);
-            this.lblLevelName2.Name = "lblLevelName2";
-            this.lblLevelName2.Size = new System.Drawing.Size(177, 29);
-            this.lblLevelName2.TabIndex = 4;
-            this.lblLevelName2.Text = "<LevelName2>";
+            this.lblLevelName4.AutoSize = true;
+            this.lblLevelName4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLevelName4.Location = new System.Drawing.Point(37, 303);
+            this.lblLevelName4.Name = "lblLevelName4";
+            this.lblLevelName4.Size = new System.Drawing.Size(177, 29);
+            this.lblLevelName4.TabIndex = 4;
+            this.lblLevelName4.Text = "<LevelName3>";
             // 
-            // pnlStarRating2
+            // pnlStarRating4
             // 
-            this.pnlStarRating2.Location = new System.Drawing.Point(38, 267);
-            this.pnlStarRating2.Name = "pnlStarRating2";
-            this.pnlStarRating2.Size = new System.Drawing.Size(200, 33);
-            this.pnlStarRating2.TabIndex = 3;
+            this.pnlStarRating4.Location = new System.Drawing.Point(38, 267);
+            this.pnlStarRating4.Name = "pnlStarRating4";
+            this.pnlStarRating4.Size = new System.Drawing.Size(200, 33);
+            this.pnlStarRating4.TabIndex = 3;
             // 
-            // lblLevelDifficulty2
+            // lblLevelDifficulty4
             // 
-            this.lblLevelDifficulty2.AutoSize = true;
-            this.lblLevelDifficulty2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLevelDifficulty2.Location = new System.Drawing.Point(38, 15);
-            this.lblLevelDifficulty2.Name = "lblLevelDifficulty2";
-            this.lblLevelDifficulty2.Size = new System.Drawing.Size(201, 29);
-            this.lblLevelDifficulty2.TabIndex = 2;
-            this.lblLevelDifficulty2.Text = "<LevelDifficulty2>";
+            this.lblLevelDifficulty4.AutoSize = true;
+            this.lblLevelDifficulty4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLevelDifficulty4.Location = new System.Drawing.Point(38, 15);
+            this.lblLevelDifficulty4.Name = "lblLevelDifficulty4";
+            this.lblLevelDifficulty4.Size = new System.Drawing.Size(201, 29);
+            this.lblLevelDifficulty4.TabIndex = 2;
+            this.lblLevelDifficulty4.Text = "<LevelDifficulty3>";
             // 
-            // imgLevelDone2
+            // imgLevelDone4
             // 
-            this.imgLevelDone2.Location = new System.Drawing.Point(220, 15);
-            this.imgLevelDone2.Name = "imgLevelDone2";
-            this.imgLevelDone2.Size = new System.Drawing.Size(40, 40);
-            this.imgLevelDone2.TabIndex = 1;
-            this.imgLevelDone2.TabStop = false;
+            this.imgLevelDone4.Location = new System.Drawing.Point(220, 15);
+            this.imgLevelDone4.Name = "imgLevelDone4";
+            this.imgLevelDone4.Size = new System.Drawing.Size(40, 40);
+            this.imgLevelDone4.TabIndex = 1;
+            this.imgLevelDone4.TabStop = false;
             // 
-            // imgLevelPreview2
+            // imgLevelPreview4
             // 
-            this.imgLevelPreview2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.imgLevelPreview2.Location = new System.Drawing.Point(39, 61);
-            this.imgLevelPreview2.Name = "imgLevelPreview2";
-            this.imgLevelPreview2.Size = new System.Drawing.Size(200, 200);
-            this.imgLevelPreview2.TabIndex = 0;
-            this.imgLevelPreview2.TabStop = false;
+            this.imgLevelPreview4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.imgLevelPreview4.Location = new System.Drawing.Point(39, 61);
+            this.imgLevelPreview4.Name = "imgLevelPreview4";
+            this.imgLevelPreview4.Size = new System.Drawing.Size(200, 200);
+            this.imgLevelPreview4.TabIndex = 0;
+            this.imgLevelPreview4.TabStop = false;
             // 
             // pnlLevel3
             // 
@@ -384,6 +384,63 @@
             this.imgLevelPreview3.TabIndex = 0;
             this.imgLevelPreview3.TabStop = false;
             // 
+            // pnlLevel2
+            // 
+            this.pnlLevel2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pnlLevel2.Controls.Add(this.lblLevelName2);
+            this.pnlLevel2.Controls.Add(this.pnlStarRating2);
+            this.pnlLevel2.Controls.Add(this.lblLevelDifficulty2);
+            this.pnlLevel2.Controls.Add(this.imgLevelDone2);
+            this.pnlLevel2.Controls.Add(this.imgLevelPreview2);
+            this.pnlLevel2.Location = new System.Drawing.Point(301, 12);
+            this.pnlLevel2.Name = "pnlLevel2";
+            this.pnlLevel2.Size = new System.Drawing.Size(278, 347);
+            this.pnlLevel2.TabIndex = 9;
+            // 
+            // lblLevelName2
+            // 
+            this.lblLevelName2.AutoSize = true;
+            this.lblLevelName2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLevelName2.Location = new System.Drawing.Point(37, 303);
+            this.lblLevelName2.Name = "lblLevelName2";
+            this.lblLevelName2.Size = new System.Drawing.Size(177, 29);
+            this.lblLevelName2.TabIndex = 4;
+            this.lblLevelName2.Text = "<LevelName2>";
+            // 
+            // pnlStarRating2
+            // 
+            this.pnlStarRating2.Location = new System.Drawing.Point(38, 267);
+            this.pnlStarRating2.Name = "pnlStarRating2";
+            this.pnlStarRating2.Size = new System.Drawing.Size(200, 33);
+            this.pnlStarRating2.TabIndex = 3;
+            // 
+            // lblLevelDifficulty2
+            // 
+            this.lblLevelDifficulty2.AutoSize = true;
+            this.lblLevelDifficulty2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLevelDifficulty2.Location = new System.Drawing.Point(38, 15);
+            this.lblLevelDifficulty2.Name = "lblLevelDifficulty2";
+            this.lblLevelDifficulty2.Size = new System.Drawing.Size(201, 29);
+            this.lblLevelDifficulty2.TabIndex = 2;
+            this.lblLevelDifficulty2.Text = "<LevelDifficulty2>";
+            // 
+            // imgLevelDone2
+            // 
+            this.imgLevelDone2.Location = new System.Drawing.Point(220, 15);
+            this.imgLevelDone2.Name = "imgLevelDone2";
+            this.imgLevelDone2.Size = new System.Drawing.Size(40, 40);
+            this.imgLevelDone2.TabIndex = 1;
+            this.imgLevelDone2.TabStop = false;
+            // 
+            // imgLevelPreview2
+            // 
+            this.imgLevelPreview2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.imgLevelPreview2.Location = new System.Drawing.Point(39, 61);
+            this.imgLevelPreview2.Name = "imgLevelPreview2";
+            this.imgLevelPreview2.Size = new System.Drawing.Size(200, 200);
+            this.imgLevelPreview2.TabIndex = 0;
+            this.imgLevelPreview2.TabStop = false;
+            // 
             // btnNextLevels
             // 
             this.btnNextLevels.AccessibleDescription = "How To Play Button";
@@ -395,63 +452,6 @@
             this.btnNextLevels.TabIndex = 10;
             this.btnNextLevels.Text = "Next Levels";
             this.btnNextLevels.UseVisualStyleBackColor = true;
-            // 
-            // pnlLevel4
-            // 
-            this.pnlLevel4.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pnlLevel4.Controls.Add(this.lblLevelName4);
-            this.pnlLevel4.Controls.Add(this.pnlStarRating4);
-            this.pnlLevel4.Controls.Add(this.lblLevelDifficulty4);
-            this.pnlLevel4.Controls.Add(this.imgLevelDone4);
-            this.pnlLevel4.Controls.Add(this.imgLevelPreview4);
-            this.pnlLevel4.Location = new System.Drawing.Point(869, 12);
-            this.pnlLevel4.Name = "pnlLevel4";
-            this.pnlLevel4.Size = new System.Drawing.Size(278, 347);
-            this.pnlLevel4.TabIndex = 10;
-            // 
-            // lblLevelName4
-            // 
-            this.lblLevelName4.AutoSize = true;
-            this.lblLevelName4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLevelName4.Location = new System.Drawing.Point(37, 303);
-            this.lblLevelName4.Name = "lblLevelName4";
-            this.lblLevelName4.Size = new System.Drawing.Size(177, 29);
-            this.lblLevelName4.TabIndex = 4;
-            this.lblLevelName4.Text = "<LevelName3>";
-            // 
-            // pnlStarRating4
-            // 
-            this.pnlStarRating4.Location = new System.Drawing.Point(38, 267);
-            this.pnlStarRating4.Name = "pnlStarRating4";
-            this.pnlStarRating4.Size = new System.Drawing.Size(200, 33);
-            this.pnlStarRating4.TabIndex = 3;
-            // 
-            // lblLevelDifficulty4
-            // 
-            this.lblLevelDifficulty4.AutoSize = true;
-            this.lblLevelDifficulty4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLevelDifficulty4.Location = new System.Drawing.Point(38, 15);
-            this.lblLevelDifficulty4.Name = "lblLevelDifficulty4";
-            this.lblLevelDifficulty4.Size = new System.Drawing.Size(201, 29);
-            this.lblLevelDifficulty4.TabIndex = 2;
-            this.lblLevelDifficulty4.Text = "<LevelDifficulty3>";
-            // 
-            // imgLevelDone4
-            // 
-            this.imgLevelDone4.Location = new System.Drawing.Point(220, 15);
-            this.imgLevelDone4.Name = "imgLevelDone4";
-            this.imgLevelDone4.Size = new System.Drawing.Size(40, 40);
-            this.imgLevelDone4.TabIndex = 1;
-            this.imgLevelDone4.TabStop = false;
-            // 
-            // imgLevelPreview4
-            // 
-            this.imgLevelPreview4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.imgLevelPreview4.Location = new System.Drawing.Point(39, 61);
-            this.imgLevelPreview4.Name = "imgLevelPreview4";
-            this.imgLevelPreview4.Size = new System.Drawing.Size(200, 200);
-            this.imgLevelPreview4.TabIndex = 0;
-            this.imgLevelPreview4.TabStop = false;
             // 
             // pnlAllLevelsRow2
             // 
@@ -729,21 +729,21 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.pnlLevel1.ResumeLayout(false);
             this.pnlLevel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.imgLevelPreview1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgLevelDone1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgLevelPreview1)).EndInit();
             this.pnlAllLevelsRow1.ResumeLayout(false);
-            this.pnlLevel2.ResumeLayout(false);
-            this.pnlLevel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.imgLevelDone2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgLevelPreview2)).EndInit();
-            this.pnlLevel3.ResumeLayout(false);
-            this.pnlLevel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.imgLevelDone3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgLevelPreview3)).EndInit();
             this.pnlLevel4.ResumeLayout(false);
             this.pnlLevel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgLevelDone4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgLevelPreview4)).EndInit();
+            this.pnlLevel3.ResumeLayout(false);
+            this.pnlLevel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imgLevelDone3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgLevelPreview3)).EndInit();
+            this.pnlLevel2.ResumeLayout(false);
+            this.pnlLevel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imgLevelDone2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgLevelPreview2)).EndInit();
             this.pnlAllLevelsRow2.ResumeLayout(false);
             this.pnlLevel8.ResumeLayout(false);
             this.pnlLevel8.PerformLayout();

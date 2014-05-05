@@ -8,15 +8,29 @@ namespace Theseus_vs_Minotaur_library
 {
     class GameController
     {
+        public GameController()
+        {
+            myTheseus = new Theseus(this);
+        }
+
         Level currentLevel; //requires instance?
         Theseus myTheseus;
         Minotaur myMinotaur;
-
         List<Direction> moveList = new List<Direction>();
         float timer;
 
+        internal Theseus MyTheseus
+        {
+            get { return myTheseus; }
+            set { myTheseus = value; }
+        }
 
-
+        internal Minotaur MyMinotaur
+        {
+            get { return myMinotaur; }
+            set { myMinotaur = value; }
+        }
+        
         public float Timer
         {
             get { return timer; }
