@@ -6,18 +6,25 @@ using System.Threading.Tasks;
 
 namespace Theseus_vs_Minotaur_library
 {
-   class Character
+  public class Character
     {
         private int xPosition, yPosition;
         private GameController myGameController;
+        private string spritePath;// image/skin?
 
-        internal GameController MyGameController
+        public string SpritePath
+        {
+            get { return spritePath; }
+            set { spritePath = value; }
+        }
+
+        public GameController MyGameController
         {
             get { return myGameController; }
             set { myGameController = value; }
         }
         // Level myLevel; Possible implementation??
-        // image/skin?
+        
 
         public int YPosition
         {
@@ -34,15 +41,19 @@ namespace Theseus_vs_Minotaur_library
         public Character(GameController theGameController) 
         { 
            this.myGameController = theGameController;
+           SpritePath = System.IO.Directory.GetCurrentDirectory();
+           SpritePath += "\\images";
         }
 
     }
 
-    class Theseus : Character
+   public class Theseus : Character
     {
-        public Theseus(GameController theGameController)
-            : base(theGameController)
+       public Theseus(GameController theGameController)
+           : base(theGameController)
         {
+           SpritePath += "\\theseus.png";
+           Console.WriteLine(SpritePath);
         }
 
         public bool Move (Direction direction)
@@ -99,11 +110,13 @@ namespace Theseus_vs_Minotaur_library
         }
     }
 
-    class Minotaur : Character
+    public class Minotaur : Character
     {
         public Minotaur(GameController theGameController)
             : base(theGameController)
         {
+            SpritePath += "\\minotaur.png";
+           Console.WriteLine(SpritePath);
         }
        
         public int[][] Move () // The Minotaur always moves twice so method returns an array with two sets of xy ints

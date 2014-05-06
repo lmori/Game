@@ -6,26 +6,27 @@ using System.Threading.Tasks;
 
 namespace Theseus_vs_Minotaur_library
 {
-    class GameController
+    public class GameController
     {
-        public GameController()
-        {
-            myTheseus = new Theseus(this);
-        }
-
-        Level currentLevel; //requires instance?
+        Level currentLevel; 
         Theseus myTheseus;
         Minotaur myMinotaur;
         List<Direction> moveList = new List<Direction>();
         float timer;
 
-        internal Theseus MyTheseus
+        public GameController()
+        {
+            myTheseus = new Theseus(this);
+            myMinotaur = new Minotaur(this);
+        }
+
+        public Theseus MyTheseus
         {
             get { return myTheseus; }
             set { myTheseus = value; }
         }
 
-        internal Minotaur MyMinotaur
+        public Minotaur MyMinotaur
         {
             get { return myMinotaur; }
             set { myMinotaur = value; }
