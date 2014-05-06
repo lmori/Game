@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblTitle = new System.Windows.Forms.Label();
             this.lblLevelName = new System.Windows.Forms.Label();
             this.lblLevelDifficulty = new System.Windows.Forms.Label();
@@ -54,6 +55,7 @@
             this.btnLoad = new System.Windows.Forms.Button();
             this.btnMainMenu = new System.Windows.Forms.Button();
             this.pnlMenuControls = new System.Windows.Forms.Panel();
+            this.timerStep = new System.Windows.Forms.Timer(this.components);
             this.pnlTitle.SuspendLayout();
             this.pnlScoreTimer.SuspendLayout();
             this.pnlGameControls.SuspendLayout();
@@ -342,6 +344,12 @@
             this.pnlMenuControls.Size = new System.Drawing.Size(143, 612);
             this.pnlMenuControls.TabIndex = 6;
             // 
+            // timerStep
+            // 
+            this.timerStep.Enabled = true;
+            this.timerStep.Interval = 1000;
+            this.timerStep.Tick += new System.EventHandler(this.timerStep_Tick);
+            // 
             // GamePlayForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -395,5 +403,6 @@
         private System.Windows.Forms.Button btnLoad;
         private System.Windows.Forms.Button btnMainMenu;
         private System.Windows.Forms.Panel pnlMenuControls;
+        private System.Windows.Forms.Timer timerStep;
     }
 }
