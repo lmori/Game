@@ -9,6 +9,13 @@ namespace Theseus_vs_Minotaur_library
    class Character
     {
         private int xPosition, yPosition;
+        private GameController myGameController;
+
+        internal GameController MyGameController
+        {
+            get { return myGameController; }
+            set { myGameController = value; }
+        }
         // Level myLevel; Possible implementation??
         // image/skin?
 
@@ -24,14 +31,25 @@ namespace Theseus_vs_Minotaur_library
             set { xPosition = value; }
         }
 
+        public Character(GameController theGameController) 
+        { 
+           this.myGameController = theGameController;
+        }
+
     }
 
     class Theseus : Character
-    {        
+    {
+        public Theseus(GameController theGameController)
+            : base(theGameController)
+        {
+        }
+
         public bool Move (Direction direction)
         {
             // define variables
-            int newX, newY;
+            int newX = 0;
+            int newY = 0;
 
             // Find the target tile based on the inputted direction
                 switch (direction)
@@ -59,10 +77,10 @@ namespace Theseus_vs_Minotaur_library
                 }
             
             // if there is no wall between theseus and the target tile
-            if (!GameController.CurrentLevel.IsWall(this.XPosition, this.YPosition, direction))  //Possible implementation??
+            if (!MyGameController.CurrentLevel.IsWall(this.XPosition, this.YPosition, direction))  //Possible implementation??
             {
                 // Record the move in the controller list
-                GameController.LogMove(direction);
+                MyGameController.LogMove(direction);
 
                 // set theseus's new position to the target position
                 this.XPosition = newX;
@@ -83,6 +101,10 @@ namespace Theseus_vs_Minotaur_library
 
     class Minotaur : Character
     {
+        public Minotaur(GameController theGameController)
+            : base(theGameController)
+        {
+        }
        
         public int[][] Move () // The Minotaur always moves twice so method returns an array with two sets of xy ints
         {
@@ -90,11 +112,12 @@ namespace Theseus_vs_Minotaur_library
             int[][] minotaurMoves = new int[2][];
             int moveCount = 0;
             int theseusX, theseusY, newX, newY;
-            Direction horizontalMove, verticalMove;
+            Direction horizontalMove = Direction.NoChange;
+            Direction verticalMove = Direction.NoChange;
             
             // Find out where Theseus is
-            theseusX = GameController.CurrentLevel.theseusXPosition; // Needs to refer to an instance somehow.
-            theseusY = GameController.CurrentLevel.theseusYPosition;
+            theseusX = MyGameController.MyTheseus.XPosition;
+            theseusY = MyGameController.MyTheseus.YPosition;
 
             // two moves
             while (moveCount < 2)
@@ -124,7 +147,7 @@ namespace Theseus_vs_Minotaur_library
                 }
 
                 // Check the horizontal move is valid (no walls/out of bounds/etc)
-                if (horizontalMove != null && !GameController.CurrentLevel.IsWall(this.YPosition, newX, horizontalMove))
+                if (horizontalMove != Direction.NoChange && !MyGameController.CurrentLevel.IsWall(this.YPosition, newX, horizontalMove))
                 {
                     minotaurMoves[0][0] = newX;
                     minotaurMoves[0][1] = this.YPosition;
@@ -155,7 +178,7 @@ namespace Theseus_vs_Minotaur_library
                 }
 
                 // Check the vertical move is valid (no walls/out of bounds/etc)
-                if (!GameController.CurrentLevel.IsWall(newY, newX, horizontalMove))
+                if (!MyGameController.CurrentLevel.IsWall(newY, newX, horizontalMove))
                 {
                     minotaurMoves[1][0] = newX;
                     minotaurMoves[1][1] = newY;

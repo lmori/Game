@@ -12,7 +12,7 @@ namespace Theseus_vs_Minotaur_library
         // void addPlayerRating();
         // void publishLevel();
         // void deleteLevel();
-        //void getLevels();
+        // void getLevel();
         // void getCurrentUser();
         // void getOnlineLevelDictionary();
         // void getLocalLevelDictionary();

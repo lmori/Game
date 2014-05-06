@@ -18,15 +18,28 @@ namespace Theseus_vs_minotaur_ui
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-
             //Application.Run(new START());
             //Application.Run(new LOGIN());
-            Application.Run(new SaveLevel());
+            //Application.Run(new LevelBrowser());
+            // Application.Run(new Form1());
+            
+            
+            bool[][] verWallArray = new bool [3][];
+            verWallArray[0] = new bool [4] {true, false, false, true};
+            verWallArray[1] = new bool [4] {true, false, true, false};
+            verWallArray[2] = new bool [4] {true, false, false, true};
+            
+            bool[][] horWallArray = new bool[4][];
+            horWallArray[0] = new bool[3] {true, true, true};  
+            horWallArray[1] = new bool[3] {false, true, false};  
+            horWallArray[2] = new bool[3] {false, true, false};  
+            horWallArray[3] = new bool[3] {true, true, true};
 
-            Application.Run(new START());
-            Application.Run(new LOGIN());
-            //Application.Run(new Form1());
+            int[] dim = {3,3};
 
+            Level testLevel = new Level("", "", "", 1, 1, 2, 2, verWallArray, horWallArray, dim);
+
+            Application.Run(new GamePlayForm(testLevel));
         }
     }
 }
