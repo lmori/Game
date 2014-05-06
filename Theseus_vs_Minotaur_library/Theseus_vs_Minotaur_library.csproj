@@ -43,7 +43,11 @@
     <Compile Include="GameController.cs" />
     <Compile Include="IStorageManagement.cs" />
     <Compile Include="Level.cs" />
+    <Compile Include="LevelDifficulty.cs" />
+    <Compile Include="PlayerRating.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="GameRating.cs" />
+    <Compile Include="Score.cs" />
     <Compile Include="StorageController.cs" />
     <Compile Include="User.cs" />
     <Compile Include="UserList.cs" />
