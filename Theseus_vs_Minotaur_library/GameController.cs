@@ -13,10 +13,12 @@ namespace Theseus_vs_Minotaur_library
         private Theseus myTheseus;
         private Minotaur myMinotaur;
         private User myCurrentUser;
-        private float timer;
-        List<Direction> moveList = new List<Direction>();
 
-    
+       // Level currentLevel = new Level(); //requires instance?
+        Theseus myTheseus;
+        Minotaur myMinotaur;
+        List<Direction> moveList = new List<Direction>();
+   
 
         public void LogMove(Direction direction)
         {

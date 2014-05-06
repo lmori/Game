@@ -151,6 +151,7 @@
             this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Name = "NewProject";
             this.Text = "Form2";
+            this.Load += new System.EventHandler(this.NewProject_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

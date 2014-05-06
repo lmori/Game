@@ -18,6 +18,7 @@ namespace Theseus_vs_minotaur_ui
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+
             //Application.Run(new START());
             //Application.Run(new LOGIN());
            // Application.Run(new Form1());
@@ -38,7 +39,14 @@ namespace Theseus_vs_minotaur_ui
 
             Level testLevel = new Level("", "", "", 1, 1, 2, 2, verWallArray, horWallArray, dim);
 
-            Application.Run(new GamePlayForm(testLevel));
+            //choose as needed to test...
+            
+           // Application.Run(new GamePlayForm(testLevel));
+            //Application.Run(new SaveLevel());
+
+            //Application.Run(new START());
+            //Application.Run(new LOGIN());
+            //Application.Run(new Form1());
 
         }
     }
