@@ -13,6 +13,7 @@ namespace Theseus_vs_minotaur_ui
 {
     public partial class LevelDesigner : Form
     {
+
         int numOfCellsV = 0;
         int numOfCellsH = 0;
         Boolean isCreated = false;
@@ -162,6 +163,12 @@ namespace Theseus_vs_minotaur_ui
         private void Form1_Load(object sender, EventArgs e)
         {
             pictureBox1.AllowDrop = true;
+        }
+
+        private void export_Click(object sender, EventArgs e)
+        {
+          //  storage.SerializeLevelsToXML();
+            ;
         }
     }
 }

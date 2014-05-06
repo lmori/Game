@@ -104,6 +104,7 @@
             this.Controls.Add(this.fileNameLbl);
             this.Name = "SaveLevel";
             this.Text = "SaveLevel";
+            this.Load += new System.EventHandler(this.SaveLevel_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

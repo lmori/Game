@@ -45,6 +45,7 @@
             // exit
             // 
             this.exit.Location = new System.Drawing.Point(672, 667);
+            this.exit.Location = new System.Drawing.Point(690, 648);
             this.exit.Name = "exit";
             this.exit.Size = new System.Drawing.Size(75, 23);
             this.exit.TabIndex = 0;
@@ -55,6 +56,7 @@
             // createNewProject
             // 
             this.createNewProject.Location = new System.Drawing.Point(39, 667);
+            this.createNewProject.Location = new System.Drawing.Point(53, 648);
             this.createNewProject.Name = "createNewProject";
             this.createNewProject.Size = new System.Drawing.Size(75, 23);
             this.createNewProject.TabIndex = 1;
@@ -65,6 +67,7 @@
             // save
             // 
             this.save.Location = new System.Drawing.Point(193, 667);
+            this.save.Location = new System.Drawing.Point(209, 648);
             this.save.Name = "save";
             this.save.Size = new System.Drawing.Size(75, 23);
             this.save.TabIndex = 2;
@@ -74,15 +77,18 @@
             // export
             // 
             this.export.Location = new System.Drawing.Point(514, 667);
+            this.export.Location = new System.Drawing.Point(516, 648);
             this.export.Name = "export";
             this.export.Size = new System.Drawing.Size(75, 23);
             this.export.TabIndex = 3;
             this.export.Text = "Export";
             this.export.UseVisualStyleBackColor = true;
+            this.export.Click += new System.EventHandler(this.export_Click);
             // 
             // import
             // 
             this.import.Location = new System.Drawing.Point(347, 667);
+            this.import.Location = new System.Drawing.Point(352, 648);
             this.import.Name = "import";
             this.import.Size = new System.Drawing.Size(75, 23);
             this.import.TabIndex = 4;
@@ -95,6 +101,10 @@
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Padding = new System.Windows.Forms.Padding(1);
             this.pictureBox1.Size = new System.Drawing.Size(600, 600);
+            this.pictureBox1.Location = new System.Drawing.Point(184, 18);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Padding = new System.Windows.Forms.Padding(1);
+            this.pictureBox1.Size = new System.Drawing.Size(525, 607);
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.DragDrop += new System.Windows.Forms.DragEventHandler(this.pictureBox1_DragDrop);
@@ -130,6 +140,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1010, 741);
             this.Controls.Add(this.panel1);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(892, 690);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.import);
             this.Controls.Add(this.export);
@@ -137,6 +150,7 @@
             this.Controls.Add(this.createNewProject);
             this.Controls.Add(this.exit);
             this.Name = "LevelDesigner";
+            this.Name = "Form1";
             this.Text = "levelDesigner";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
