@@ -18,12 +18,17 @@ namespace Theseus_vs_minotaur_ui
         Boolean isCreated = false;
         Rectangle[,] HorWalls;
         Rectangle[,] VerWalls;
-        Boolean[,] Hor;
-        Boolean[,] Ver;
+
+        // After save botton is clicked, these data need be stored to level object
+        Boolean[,] Hor; //horizontal wall matrix
+        Boolean[,] Ver; //vertical wall matrix
+        int[] thesis_position = new int[2]; //thesis matrix position
+        int[] minotaur_position = new int[2]; //minotaur matrix position
 
         public LevelDesigner()
         {
             InitializeComponent();
+            // Don't use creatgraphic(). Use paint. Overwise graphic will dissapear each time form minmize.
         }
         private void exit_Click(object sender, EventArgs e)
         {
@@ -82,6 +87,7 @@ namespace Theseus_vs_minotaur_ui
             }
         }
 
+        // paint the maze
         private void pictureBox1_Paint(object sender, PaintEventArgs e)
         {
             Graphics g = e.Graphics;
@@ -123,6 +129,7 @@ namespace Theseus_vs_minotaur_ui
                 g.DrawString("Nothing Yet", new Font("Tahoma", 40), Brushes.Black, new Point(50, 300));
         }
 
+        // find out which wall was clicked after picturebox1 is being hit
         private void pictureBox1_Click(object sender, MouseEventArgs e)
         {
             for (int j = 0; j < numOfCellsH; j++)
@@ -170,6 +177,11 @@ namespace Theseus_vs_minotaur_ui
         }
 
         private void export_Click(object sender, EventArgs e) //Will probably get rid of this button and just use save_Click instead
+        {
+
+        }
+
+        private void import_Click(object sender, EventArgs e) //Will probably get rid of this button and just use Form1_Load instead
         {
 
         }
