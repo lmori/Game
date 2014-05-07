@@ -44,6 +44,7 @@ namespace Theseus_vs_Minotaur_library
             set 
             {
                 currentLevel = value;
+                //set the minotaur and theseus positions to the levels specified start positions
                 myMinotaur.XPosition = currentLevel.MinotaurXPosition;
                 myMinotaur.YPosition = currentLevel.MinotaurYPosition;
                 myTheseus.XPosition = currentLevel.TheseusXPosition;

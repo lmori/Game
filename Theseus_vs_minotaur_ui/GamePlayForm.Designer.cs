@@ -347,6 +347,7 @@
             // timerStep
             // 
             this.timerStep.Enabled = true;
+            this.timerStep.Interval = 500;
             this.timerStep.Tick += new System.EventHandler(this.timerStep_Tick);
             // 
             // GamePlayForm
@@ -358,11 +359,12 @@
             this.Controls.Add(this.pnlMenuControls);
             this.Controls.Add(this.pnlScoreTimer);
             this.Controls.Add(this.pnlTitle);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MinimumSize = new System.Drawing.Size(800, 764);
             this.Name = "GamePlayForm";
             this.Text = "Theseus vs The Minotaur";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.GamePlayForm_Load);
+            this.Resize += new System.EventHandler(this.GamePlayForm_Resize);
             this.pnlTitle.ResumeLayout(false);
             this.pnlTitle.PerformLayout();
             this.pnlScoreTimer.ResumeLayout(false);
