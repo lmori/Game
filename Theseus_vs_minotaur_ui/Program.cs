@@ -37,7 +37,7 @@ namespace Theseus_vs_minotaur_ui
 
             int[] dim = { 3, 3 };
 
-            Level testLevel = new Level("", "", "", 1, 1, 2, 2, verWallArray, horWallArray, dim,true);
+            Level testLevel = new Level("", "", "", 2, 1, 2, 3, verWallArray, horWallArray, dim,true);
 
             //choose as needed to test...
             

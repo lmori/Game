@@ -347,7 +347,6 @@
             // timerStep
             // 
             this.timerStep.Enabled = true;
-            this.timerStep.Interval = 1000;
             this.timerStep.Tick += new System.EventHandler(this.timerStep_Tick);
             // 
             // GamePlayForm

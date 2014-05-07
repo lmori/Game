@@ -41,7 +41,14 @@ namespace Theseus_vs_Minotaur_library
         public Level CurrentLevel
         {
             get { return currentLevel; }
-            set { currentLevel = value; }
+            set 
+            {
+                currentLevel = value;
+                myMinotaur.XPosition = currentLevel.MinotaurXPosition;
+                myMinotaur.YPosition = currentLevel.MinotaurYPosition;
+                myTheseus.XPosition = currentLevel.TheseusXPosition;
+                myTheseus.YPosition = currentLevel.TheseusYPosition;
+            }
         }
 
         public void LogMove(Direction direction)
