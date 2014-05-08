@@ -248,8 +248,6 @@ namespace Theseus_vs_Minotaur_library
                     moveCount++;
              
             }
-            Console.WriteLine(MyGameController.CurrentLevel.IsWall(this.XPosition, this.YPosition, horizontalMove).ToString() + " mH");
-            Console.WriteLine(MyGameController.CurrentLevel.IsWall(this.XPosition, this.YPosition, verticalMove).ToString() + " mV");
             return minotaurMoves;
         }
     }
