@@ -136,7 +136,7 @@ namespace Theseus_vs_Minotaur_library
         //from "oldXPosition.." to column and "oldYPosition" to "row"
         //Method takes a column and a row and a direction. It returns a boolean of whether a wall is in that direction
         //suggested usage - if IsWall(column, row, direction) == false then move else dont 
-        public bool IsWall(int column, int row, Direction direction)
+        public bool IsWall(int x, int y, Direction direction)
         {
             int innerArray, innerArrayIndex;
             bool[][] outerArray;
@@ -145,26 +145,26 @@ namespace Theseus_vs_Minotaur_library
             {
                 case Direction.Right:
                     outerArray = verticalWallArray;
-                    innerArray = row - 1;
-                    innerArrayIndex = column;
+                    innerArray = y - 1;
+                    innerArrayIndex = x;
                     result = outerArray[innerArray][innerArrayIndex];
                     break;
                 case Direction.Left:
                     outerArray = verticalWallArray;
-                    innerArray = row - 1;
-                    innerArrayIndex = column - 1;
+                    innerArray = y - 1;
+                    innerArrayIndex = x - 1;
                     result = outerArray[innerArray][innerArrayIndex];
                     break;
                 case Direction.Up:
                     outerArray = horizontalWallArray;
-                    innerArray = row - 1;
-                    innerArrayIndex = column - 1;
+                    innerArray = y - 1;
+                    innerArrayIndex = x - 1;
                     result = outerArray[innerArray][innerArrayIndex];
                     break;
                 case Direction.Down:
                     outerArray = horizontalWallArray;
-                    innerArray = row;
-                    innerArrayIndex = column - 1;
+                    innerArray = y;
+                    innerArrayIndex = x - 1;
                     result = outerArray[innerArray][innerArrayIndex];
                     break;
                 case Direction.NoChange:

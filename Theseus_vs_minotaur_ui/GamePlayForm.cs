@@ -35,6 +35,9 @@ namespace Theseus_vs_minotaur_ui
         //initialize more related varibles
         int stepCount = 0;
         int totalSteps = 2;
+        
+        bool isCharacterMoving;
+        int[][] minotaurMoves;
 
         //contructor. Will in future probably just set the gameController and get the images. may not take a level as an argument... level may be set elsewhere
         public GamePlayForm(Level testLevel)
@@ -71,7 +74,7 @@ myGameController.CurrentLevel = testLevel;//Possibly not as an argument but by l
         {
             ScaleToScreen(); 
             
-move(Direction.Right);//for testing purposes
+
         }
         
         //paint method responsible for moving characters
@@ -86,7 +89,7 @@ move(Direction.Right);//for testing purposes
         }
         
         //will be the method run by various movement events to start the game moving
-        private void move(Direction direction)
+        private void TheseusMove(Direction direction)
         {
             //change the library data for the theseus first 
             myGameController.MyTheseus.Move(direction);
@@ -95,12 +98,21 @@ move(Direction.Right);//for testing purposes
             theseusGoalYPixel = calculateCharacterYPixel(myGameController.MyTheseus.YPosition);
             //reset the step count to 0 before running the timer. This is used to check the state of the incremental move of the character
             //vs the number of steps required
-            int stepCount = 0;
+            stepCount = 0;
             //start the timer - responsible for causing the form to repaint
             timerStep.Start();
-            
-            //similar pattern required twice for minotaur's two moves
+            minotaurMoves = myGameController.MyMinotaur.Move();
+        }
 
+        private void MinotaurMove(int moveNum)
+        {
+            //similar pattern required twice for minotaur's two moves
+            
+            //MessageBox.Show(minotaurMoves[moveNum][0].ToString());
+            minotaurGoalXPixel = calculateCharacterXPixel(minotaurMoves[moveNum][0]);
+            minotaurGoalYPixel = calculateCharacterYPixel(minotaurMoves[moveNum][1]);
+            stepCount = 0;
+            timerStep.Start();
         }
         //converts a column to a x pixel value
         private int calculateCharacterXPixel(int column)
@@ -168,11 +180,12 @@ move(Direction.Right);//for testing purposes
                 }
                 //start drawing on the next row. Walls by are drawn by each row like so:
                 // | | | | 
-                // | | | 
+                // | | | ->
                 //not
                 // | |
                 // | |
-                // |
+                // | V
+                 
                 yposition += cellHeight;
             }
             
@@ -210,26 +223,82 @@ move(Direction.Right);//for testing purposes
                minotaurCurrentXPixel == minotaurGoalXPixel && minotaurCurrentYPixel == minotaurGoalYPixel)
            {
                timerStep.Stop();
-           }
-           else
+           } 
+           else if (theseusCurrentXPixel != theseusGoalXPixel)
            {
-               
                if (stepCount <= totalSteps)
                {
                    int stepSize = (theseusGoalXPixel - theseusCurrentXPixel) / totalSteps;
                    if (stepCount == totalSteps)
                    {
                        theseusCurrentXPixel = theseusGoalXPixel;
+                       MinotaurMove(0);
                    }
                    else
                    {
                        theseusCurrentXPixel += stepSize;
                    }
                    stepCount += 1;
+                   pnlGameBoard.Invalidate();                   
+               }
+               
+           }
+           else if (theseusCurrentYPixel != theseusGoalYPixel)
+           {
+               if (stepCount <= totalSteps)
+               {
+                   int stepSize = (theseusGoalYPixel - theseusCurrentYPixel) / totalSteps;
+                   if (stepCount == totalSteps)
+                   {
+                       theseusCurrentYPixel = theseusGoalYPixel;
+                       MinotaurMove(0);
+                   }
+                   else
+                   {
+                       theseusCurrentYPixel += stepSize;
+                   }
+                   stepCount += 1;
                    pnlGameBoard.Invalidate();
                }
            }
-            
+           else if (minotaurCurrentXPixel != minotaurGoalXPixel)
+           {
+               if (stepCount <= totalSteps)
+               {
+                   int stepSize = (minotaurGoalXPixel - minotaurCurrentXPixel) / totalSteps;
+                   if (stepCount == totalSteps)
+                   {
+                       minotaurCurrentXPixel = minotaurGoalXPixel;
+                       MinotaurMove(1);
+                   }
+                   else
+                   {
+                       minotaurCurrentXPixel += stepSize;
+                   }
+                   stepCount += 1;
+                   pnlGameBoard.Invalidate();
+               }
+
+           }
+           else if (minotaurCurrentYPixel != minotaurGoalYPixel)
+           {
+               if (stepCount <= totalSteps)
+               {
+                   int stepSize = (minotaurGoalYPixel - minotaurCurrentYPixel) / totalSteps;
+                   if (stepCount == totalSteps)
+                   {
+                       minotaurCurrentYPixel = minotaurGoalYPixel;
+                       
+                   }
+                   else
+                   {
+                       minotaurCurrentYPixel += stepSize;
+                   }
+                   stepCount += 1;
+                   pnlGameBoard.Invalidate();
+               }
+
+           } 
 
 
         }
@@ -237,6 +306,31 @@ move(Direction.Right);//for testing purposes
         private void GamePlayForm_Resize(object sender, EventArgs e)
         {
             ScaleToScreen();
+        }
+
+        private void btnMoveRight_Click(object sender, EventArgs e)
+        {
+            TheseusMove(Direction.Right);//for testing purposes
+        }
+
+        private void btnMoveLeft_Click(object sender, EventArgs e)
+        {
+            TheseusMove(Direction.Left);
+        }
+
+        private void btnMoveDown_Click(object sender, EventArgs e)
+        {
+            TheseusMove(Direction.Down);
+        }
+
+        private void btnMoveUp_Click(object sender, EventArgs e)
+        {
+            TheseusMove(Direction.Up);
+        }
+
+        private void btnMoveNoChange_Click(object sender, EventArgs e)
+        {
+            TheseusMove(Direction.NoChange);
         }
         
 

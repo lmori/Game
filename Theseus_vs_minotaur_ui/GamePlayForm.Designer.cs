@@ -245,6 +245,7 @@
             this.btnMoveNoChange.TabIndex = 4;
             this.btnMoveNoChange.Text = "Stay";
             this.btnMoveNoChange.UseVisualStyleBackColor = true;
+            this.btnMoveNoChange.Click += new System.EventHandler(this.btnMoveNoChange_Click);
             // 
             // btnMoveDown
             // 
@@ -255,6 +256,7 @@
             this.btnMoveDown.TabIndex = 3;
             this.btnMoveDown.Text = "Down";
             this.btnMoveDown.UseVisualStyleBackColor = true;
+            this.btnMoveDown.Click += new System.EventHandler(this.btnMoveDown_Click);
             // 
             // btnMoveRight
             // 
@@ -265,6 +267,7 @@
             this.btnMoveRight.TabIndex = 2;
             this.btnMoveRight.Text = "Right";
             this.btnMoveRight.UseVisualStyleBackColor = true;
+            this.btnMoveRight.Click += new System.EventHandler(this.btnMoveRight_Click);
             // 
             // btnMoveLeft
             // 
@@ -275,6 +278,7 @@
             this.btnMoveLeft.TabIndex = 1;
             this.btnMoveLeft.Text = "Left";
             this.btnMoveLeft.UseVisualStyleBackColor = true;
+            this.btnMoveLeft.Click += new System.EventHandler(this.btnMoveLeft_Click);
             // 
             // btnMoveUp
             // 
@@ -285,6 +289,7 @@
             this.btnMoveUp.TabIndex = 0;
             this.btnMoveUp.Text = "Up";
             this.btnMoveUp.UseVisualStyleBackColor = true;
+            this.btnMoveUp.Click += new System.EventHandler(this.btnMoveUp_Click);
             // 
             // btnNewLevel
             // 
@@ -359,6 +364,7 @@
             this.Controls.Add(this.pnlMenuControls);
             this.Controls.Add(this.pnlScoreTimer);
             this.Controls.Add(this.pnlTitle);
+            this.DoubleBuffered = true;
             this.MinimumSize = new System.Drawing.Size(800, 764);
             this.Name = "GamePlayForm";
             this.Text = "Theseus vs The Minotaur";
