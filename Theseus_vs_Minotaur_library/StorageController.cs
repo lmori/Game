@@ -7,21 +7,49 @@ using System.Text.RegularExpressions;
 using System.Xml.Serialization;
 using System.Xml;
 using System.IO;
-//using System.Windows.Forms; needed?
+
 
 namespace Theseus_vs_Minotaur_library
 {
 
     [Serializable]
-    public class StorageController : IStorageManagement
+     public class StorageController 
     {
-        
 
+        private static StorageController instance = null;
 
+        public static StorageController Instance
+        {
+            get {
+                if (instance == null)
+                {
+                    instance = new StorageController();
+                }
+                return instance; }
+        }
+
+        //Constructor
+        public StorageController()
+        {
+            currentUser = new User();
+            users = new UserList();
+            levelDictionary = new Dictionary<String, Level>();
+        }
+   
+       
         private UserList users;
 
-        private Level lev;
-       // private List<Level> levels;
+        private User currentUser = null;
+
+        public User CurrentUser
+        {
+            get { 
+                
+                return currentUser; }
+           
+        }
+
+       
 
         private Dictionary<String, Level> levelDictionary;
 
@@ -34,15 +62,8 @@ namespace Theseus_vs_Minotaur_library
         public string serverRootLocation { get; set; }
         public string currentRootLocation { get; set; }
 
-        //Constructor
-        public StorageController()
-        {
-
-            users = new UserList();
-            //levels = new List<Level>();
-            levelDictionary = new Dictionary<String, Level>();
-
-        }
+       
+      
 
 
         public UserList getUsers()
@@ -55,14 +76,18 @@ namespace Theseus_vs_Minotaur_library
         {
             return levelDictionary;
         }
-
+      
 
         public void CreateUser(String name)
         {
             var theUser = new User(name);
+            
+           
+                
             if (File.Exists(@"h:\users.xml"))
             {
                 var userList = deserializeFromXML();
+               
                 foreach (User u in userList.Users)
                 {
                     users.Users.Add(u);
@@ -72,6 +97,8 @@ namespace Theseus_vs_Minotaur_library
             }
             users.Users.Add(theUser);
         }
+              
+
 
         public void SerializeToXML()
         {

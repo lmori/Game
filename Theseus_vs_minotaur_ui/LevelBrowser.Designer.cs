@@ -1,4 +1,6 @@
-﻿namespace Theseus_vs_minotaur_ui
+﻿
+
+namespace Theseus_vs_minotaur_ui
 {
     partial class LevelBrowser
     {
@@ -727,6 +729,7 @@
             this.Name = "LevelBrowser";
             this.Text = "LevelBrowser";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.LevelBrowser_Load);
             this.pnlLevel1.ResumeLayout(false);
             this.pnlLevel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgLevelDone1)).EndInit();

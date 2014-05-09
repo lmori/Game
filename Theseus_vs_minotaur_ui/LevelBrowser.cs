@@ -16,5 +16,10 @@ namespace Theseus_vs_minotaur_ui
         {
             InitializeComponent();
         }
+
+        private void LevelBrowser_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

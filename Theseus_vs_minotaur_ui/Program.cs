@@ -19,9 +19,9 @@ namespace Theseus_vs_minotaur_ui
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            //Application.Run(new START());
-            //Application.Run(new LOGIN());
-           // Application.Run(new Form1());
+            //First Page to be displayed
+            Application.Run(new LOGIN());
+           
             
             
             bool[][] verWallArray = new bool [3][];
@@ -37,7 +37,7 @@ namespace Theseus_vs_minotaur_ui
 
             int[] dim = {3,3};
 
-            Level testLevel = new Level("", "", "", 1, 1, 2, 2, verWallArray, horWallArray, dim,true);
+           Level testLevel = new Level("", "", "", 1, 1, 2, 2, verWallArray, horWallArray, dim,true);
 
             //choose as needed to test...
             

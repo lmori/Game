@@ -104,6 +104,11 @@ namespace Theseus_vs_minotaur_ui
             }
             graphicsObj.Dispose();
         }
+
+        private void pnlTitle_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
         
 
     }
