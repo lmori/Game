@@ -62,3 +62,8 @@ H:\GameStuff\Game\Theseus_vs_Minotaur_library\obj\Debug\Theseus_vs_Minotaur_libr
 H:\GameStuff\Game\Theseus_vs_Minotaur_library\obj\Debug\Theseus_vs_Minotaur_library.pdb
 H:\GameStuff\Game\Theseus_vs_Minotaur_library\bin\Debug\Theseus_vs_Minotaur_library.dll
 H:\GameStuff\Game\Theseus_vs_Minotaur_library\bin\Debug\Theseus_vs_Minotaur_library.pdb
+H:\Game-Master\Game\Theseus_vs_Minotaur_library\bin\Debug\Theseus_vs_Minotaur_library.dll
+H:\Game-Master\Game\Theseus_vs_Minotaur_library\bin\Debug\Theseus_vs_Minotaur_library.pdb
+H:\Game-Master\Game\Theseus_vs_Minotaur_library\obj\Debug\Theseus_vs_Minotaur_library.csprojResolveAssemblyReference.cache
+H:\Game-Master\Game\Theseus_vs_Minotaur_library\obj\Debug\Theseus_vs_Minotaur_library.dll
+H:\Game-Master\Game\Theseus_vs_Minotaur_library\obj\Debug\Theseus_vs_Minotaur_library.pdb

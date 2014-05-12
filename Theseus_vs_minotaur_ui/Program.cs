@@ -38,14 +38,17 @@ namespace Theseus_vs_minotaur_ui
 
             int[] dim = {3,3};
 
-           Level testLevel = new Level("test", "bfd", "gfd", 1, 1, 2, 2, verWallArray, horWallArray, dim,true);
+           Level testLevel = new Level("test.xml" , "First Level", "Me", 1, 1, 2, 2, verWallArray, horWallArray, dim,true);
 
-
+            //Testing level into dictionary and out to xml file
            LevelDictionary<string, Level> levelDictionary = new LevelDictionary<string, Level>();
 
-           levelDictionary.Add(testLevel.FileName, testLevel);
-          
+            //is the filename the key?
+           levelDictionary.Add(testLevel.LevelName, testLevel);
 
+           StreamWriter writer = new StreamWriter(@"h:\levels.xml");
+           XmlSerializer serialiser = new XmlSerializer(levelDictionary.GetType());
+           serialiser.Serialize(writer, levelDictionary);
 
       
           
