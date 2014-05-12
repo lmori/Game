@@ -4,7 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Theseus_vs_Minotaur_library;
-
+using System.IO;
+using System.Xml.Serialization;
 
 namespace Theseus_vs_minotaur_ui
 {
@@ -19,10 +20,14 @@ namespace Theseus_vs_minotaur_ui
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
+
             //Application.Run(new START());
             //Application.Run(new LOGIN());
            // Application.Run(new Form1());
 
+            //First Page to be displayed
+            Application.Run(new LOGIN());
+           
 
             bool[][] verWallArray = new bool[3][];
             verWallArray[0] = new bool[5] { true, false, false, true, false };
@@ -37,8 +42,23 @@ namespace Theseus_vs_minotaur_ui
 
             int[] dim = { 4, 3 };
 
-            Level testLevel = new Level("", "Dam You", "Bob", 2, 1, 2, 3,4,2, verWallArray, horWallArray, dim,true);
             GameController.CurrentLevel = testLevel;
+
+           Level testLevel = new Level("test.xml" , "First Level", "Me", 1, 1, 2, 2, verWallArray, horWallArray, dim,true);
+
+            //Testing level into dictionary and out to xml file
+           LevelDictionary<string, Level> levelDictionary = new LevelDictionary<string, Level>();
+
+            //is the filename the key?
+           levelDictionary.Add(testLevel.LevelName, testLevel);
+
+           StreamWriter writer = new StreamWriter(@"h:\levels.xml");
+           XmlSerializer serialiser = new XmlSerializer(levelDictionary.GetType());
+           serialiser.Serialize(writer, levelDictionary);
+
+      
+          
+>>>>>>> master
             //choose as needed to test...
             
             Application.Run(new GamePlayForm());

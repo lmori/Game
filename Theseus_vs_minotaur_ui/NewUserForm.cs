@@ -12,19 +12,17 @@ using Theseus_vs_Minotaur_library;
 using System.IO;
 using System.Xml.Serialization;
 
-namespace Theseus_vs_Minotaur_library
+namespace Theseus_vs_minotaur_ui
 {
     public partial class userNameForm : Form
     {
         private string userName = "null";
-        private StorageController storage;
-
+        StorageController storage = StorageController.Instance;
+       
         public userNameForm()
         {
             InitializeComponent();
-            storage = new StorageController();
-            
-
+          
         }
 
         public string getUserName()
@@ -37,8 +35,6 @@ namespace Theseus_vs_Minotaur_library
         {
             //Catch user input from textbox 
             string userName = textBox1.Text; //getUserName();
-
-            
           
             //if Validation passes
             if (!User.IsValidName(userName))
@@ -50,11 +46,21 @@ namespace Theseus_vs_Minotaur_library
                 //ifthe username doesnt already exist
                 if (!storage.isUserValid(userName))
                 {
-
+                    
                     storage.CreateUser(userName);
                     storage.Save();
-                    MessageBox.Show("this will redirect to main game page assigned to user " + userName);
-                    Application.Exit(); // this needs to be directed to the main game page
+                  
+
+                    storage.CurrentUser.Username = userName;
+                    START start = new START();
+                    
+                    start.ShowDialog();
+
+                 
+
+                  
+                  
+                 
                  
                   
                            
@@ -70,7 +76,7 @@ namespace Theseus_vs_Minotaur_library
 
             }
 
-            // for every user existing in the local users file
+        
             
 
         }
@@ -82,10 +88,7 @@ namespace Theseus_vs_Minotaur_library
 
         }
 
-       /* private void saveToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            storage.Save();
-        }*/
+    
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -100,11 +103,11 @@ namespace Theseus_vs_Minotaur_library
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Hide();
             LOGIN logform = new LOGIN();
             logform.ShowDialog();
             //storage.SerializeToXML();
-
+            
         }
 
 

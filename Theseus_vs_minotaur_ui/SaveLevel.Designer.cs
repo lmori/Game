@@ -90,6 +90,7 @@
             this.saveLevelOk.TabIndex = 10;
             this.saveLevelOk.Text = "Ok";
             this.saveLevelOk.UseVisualStyleBackColor = true;
+            this.saveLevelOk.Click += new System.EventHandler(this.saveLevelOk_Click);
             // 
             // SaveLevel
             // 

@@ -8,7 +8,7 @@ namespace Theseus_vs_Minotaur_library
 {
     public class Score
     {
-        
+
         private int userScore;
 
         public int UserScore
@@ -16,7 +16,7 @@ namespace Theseus_vs_Minotaur_library
             get { return userScore; }
             set { userScore = value; }
         }
-       
+
         private int levelTime;
 
         public int LevelTime
@@ -25,6 +25,33 @@ namespace Theseus_vs_Minotaur_library
             set { levelTime = value; }
         }
 
+        private Level theLevel = null;
+
+        public Level TheLevel
+        {
+            get { return theLevel; }
+            set { theLevel = value; }
+        }
+
+
+        private User theUser = null;
+
+        public User TheUser
+        {
+            get { return theUser; }
+            set { theUser = value; }
+        }
+
+
+        public Score()
+        {
+
+            UserScore = userScore;
+            LevelTime = levelTime;
+        }
+
     }
 }
+
+
 

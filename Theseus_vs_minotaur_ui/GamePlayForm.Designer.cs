@@ -120,6 +120,7 @@
             this.pnlTitle.Name = "pnlTitle";
             this.pnlTitle.Size = new System.Drawing.Size(784, 114);
             this.pnlTitle.TabIndex = 4;
+            this.pnlTitle.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlTitle_Paint);
             // 
             // lblUsername
             // 
@@ -317,6 +318,7 @@
             this.btnHighScores.TabIndex = 7;
             this.btnHighScores.Text = "HighScores";
             this.btnHighScores.UseVisualStyleBackColor = true;
+            this.btnHighScores.Click += new System.EventHandler(this.btnHighScores_Click);
             // 
             // btnLoad
             // 

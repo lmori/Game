@@ -36,6 +36,7 @@ namespace Theseus_vs_minotaur_ui
 
         }
 
+
         // Function that splits a long list of results into displayable chunks
         private List<Level>[] getDisplaySet(List<Level> levelList)
         {
@@ -99,6 +100,12 @@ namespace Theseus_vs_minotaur_ui
 
         }
 
+
+
+        private void LevelBrowser_Load(object sender, EventArgs e)
+        {
+
+        }
 
     }
 }

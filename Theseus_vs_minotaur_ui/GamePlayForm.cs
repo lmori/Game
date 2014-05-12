@@ -340,5 +340,37 @@ namespace Theseus_vs_minotaur_ui
         {
             TheseusMove(Direction.NoChange);
         }
+
+        private void pnlTitle_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnHighScores_Click(object sender, EventArgs e)
+        {
+            /* This will need to be added to the high scores dialog box form on load when it 
+                is created to populate the high scores list box
+
+            
+             if (File.Exists(@"h:\scores.xml"))
+             {
+                 //get list of scores from xml file "users.xml"
+                 var scoreList = storage.deserializeScoresFromXML();
+
+//For every score in the list populate the list box with the user and the score - temp name of listbox = ListBoxScore
+                 foreach (Score s in scoreList.Scores)
+                 {
+                     ListBoxScore.Items.Add(s.Username + s.userScore);
+
+                 }
+
+             }
+
+             else {
+                 ListBoxScore.Items.Add("No High Scores Exist" );
+         }
+     }*/
+
+        }
     }
 }
