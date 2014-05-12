@@ -12,11 +12,12 @@ using System.Text.RegularExpressions;
 using System.IO;
 using System.Xml.Serialization;
 
-namespace Theseus_vs_Minotaur_library
+namespace Theseus_vs_minotaur_ui
 {
     public partial class LOGIN : Form
     {
-      private StorageController storage = new StorageController(); 
+        
+      private StorageController storage = StorageController.Instance; 
 
         public LOGIN()
         {
@@ -32,8 +33,7 @@ namespace Theseus_vs_Minotaur_library
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-           //Just checking item selected is correct, will be taken out
-                MessageBox.Show("You selected " + UsersBox.SelectedItem.ToString());
+         
         }
 
         private void LoginPage_Load(object sender, EventArgs e)
@@ -66,7 +66,6 @@ namespace Theseus_vs_Minotaur_library
 
         private void OK_Click(object sender, EventArgs e)
         {   
-            //get the selected user
             
 
             //if no user has been selected show message
@@ -75,12 +74,15 @@ namespace Theseus_vs_Minotaur_library
                
             else
             {
-                var selectedUser = getSelected();
-                //otherwise redirect to game page logged in as selected user
-                MessageBox.Show("This will need to redirect to main game page assigned to user " + selectedUser);
-                Application.Exit();
+                var selected = getSelected();
+
+                storage.CurrentUser.Username = selected; 
+
+                START start = new START();
+                this.Hide();
+                start.ShowDialog();
+                
             }
-           
         }
 
 

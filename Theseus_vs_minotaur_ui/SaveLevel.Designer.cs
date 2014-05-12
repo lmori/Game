@@ -90,6 +90,7 @@
             this.saveLevelOk.TabIndex = 10;
             this.saveLevelOk.Text = "Ok";
             this.saveLevelOk.UseVisualStyleBackColor = true;
+            this.saveLevelOk.Click += new System.EventHandler(this.saveLevelOk_Click);
             // 
             // SaveLevel
             // 
@@ -104,6 +105,7 @@
             this.Controls.Add(this.fileNameLbl);
             this.Name = "SaveLevel";
             this.Text = "SaveLevel";
+            this.Load += new System.EventHandler(this.SaveLevel_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

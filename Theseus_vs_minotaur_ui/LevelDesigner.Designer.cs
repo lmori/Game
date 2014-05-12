@@ -44,6 +44,7 @@
             // 
             // exit
             // 
+
             this.exit.Location = new System.Drawing.Point(889, 742);
             this.exit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.exit.Name = "exit";
@@ -66,6 +67,7 @@
             // 
             // save
             // 
+
             this.save.Location = new System.Drawing.Point(252, 742);
             this.save.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.save.Name = "save";
@@ -88,6 +90,7 @@
             // 
             // import
             // 
+
             this.import.Location = new System.Drawing.Point(453, 749);
             this.import.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.import.Name = "import";
@@ -99,6 +102,7 @@
             // 
             // pictureBox1
             // 
+
             this.pictureBox1.Location = new System.Drawing.Point(52, 0);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";

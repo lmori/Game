@@ -1,4 +1,4 @@
-﻿namespace Theseus_vs_Minotaur_library
+﻿namespace Theseus_vs_minotaur_ui
 {
     partial class LOGIN
     {
