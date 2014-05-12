@@ -72,3 +72,6 @@ C:\Users\Jeremy\Desktop\Game-GPJeremy USE\Theseus_vs_Minotaur_library\bin\Debug\
 C:\Users\Jeremy\Desktop\Game-GPJeremy USE\Theseus_vs_Minotaur_library\obj\Debug\Theseus_vs_Minotaur_library.csprojResolveAssemblyReference.cache
 C:\Users\Jeremy\Desktop\Game-GPJeremy USE\Theseus_vs_Minotaur_library\obj\Debug\Theseus_vs_Minotaur_library.dll
 C:\Users\Jeremy\Desktop\Game-GPJeremy USE\Theseus_vs_Minotaur_library\obj\Debug\Theseus_vs_Minotaur_library.pdb
+C:\Users\Catherine\Documents\GitHub\Projects\TheseusVsMinotaur\Theseus_vs_Minotaur_library\bin\Debug\Theseus_vs_Minotaur_library.dll
+C:\Users\Catherine\Documents\GitHub\Projects\TheseusVsMinotaur\Theseus_vs_Minotaur_library\bin\Debug\Theseus_vs_Minotaur_library.pdb
+C:\Users\Catherine\Documents\GitHub\Projects\TheseusVsMinotaur\Theseus_vs_Minotaur_library\obj\Debug\Theseus_vs_Minotaur_library.pdb
