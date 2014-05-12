@@ -99,3 +99,7 @@ H:\check\Game\Theseus_vs_Minotaur_library\bin\Debug\Theseus_vs_Minotaur_library.
 H:\check\Game\Theseus_vs_Minotaur_library\bin\Debug\Theseus_vs_Minotaur_library.pdb
 H:\check\Game\Theseus_vs_Minotaur_library\obj\Debug\Theseus_vs_Minotaur_library.dll
 H:\check\Game\Theseus_vs_Minotaur_library\obj\Debug\Theseus_vs_Minotaur_library.pdb
+H:\a\Game\Theseus_vs_Minotaur_library\bin\Debug\Theseus_vs_Minotaur_library.dll
+H:\a\Game\Theseus_vs_Minotaur_library\bin\Debug\Theseus_vs_Minotaur_library.pdb
+H:\a\Game\Theseus_vs_Minotaur_library\obj\Debug\Theseus_vs_Minotaur_library.dll
+H:\a\Game\Theseus_vs_Minotaur_library\obj\Debug\Theseus_vs_Minotaur_library.pdb
