@@ -21,36 +21,51 @@ namespace Theseus_vs_Minotaur_library
 
     public class SaveGame
     {
-        string levelName;
-        public string LevelName
+        Level levelName;
+        public Level LevelName
         {
           get { return levelName; }
           set { levelName = value; }
         }
         
-        string playerName;
-        public string PlayerName
+        User playerName = null;
+        public User PlayerName
         {
             get { return playerName; }
             set { playerName = value; }
         }
 
-        int gameScore;
-        public int GameScore
+        Score gameScore;
+        public Score GameScore
         {
           get { return gameScore; }
           set { gameScore = value; }
         }
 
-        float getTimerSecs;
+        int getTimerSecs;
 
-        public float GetTimerSecs
+        public int GetTimerSecs
         {
             get { return getTimerSecs; }
             set { getTimerSecs = value; }
         }
-      
-    
+
+        private List<Direction> movesList = new List<Direction>();    
+         
+        public List<Direction> MovesList
+        {
+          get { return movesList; }
+          set { movesList = value; }
+        }
+
+        public SaveGame(Level levelName)
+        {
+            LevelName = levelName;
+        }
+
+        public SaveGame()
+        {
+        }
     
     }
 

@@ -12,8 +12,8 @@ using System.IO;
 namespace Theseus_vs_Minotaur_library
 {
 
-    
-    public class StorageController
+
+    public class StorageController : IStorageManagement
     {
 
         private static StorageController instance = null;
@@ -36,6 +36,8 @@ namespace Theseus_vs_Minotaur_library
             currentUser = new User();
             users = new UserList();
             scores = new ScoreList();
+            
+
            
             levelDictionary = new LevelDictionary<String, Level>();
         }
@@ -43,6 +45,8 @@ namespace Theseus_vs_Minotaur_library
 
         private UserList users;
         private ScoreList scores;
+       
+
 
         private User currentUser = null;
 
@@ -55,7 +59,6 @@ namespace Theseus_vs_Minotaur_library
             }
 
         }
-
 
         
         private LevelDictionary<String, Level> levelDictionary;
@@ -246,7 +249,7 @@ namespace Theseus_vs_Minotaur_library
         }
 
         //deserialized levels, adds to the dictionary and returns the level from the key value input parameter
-        public Level getLevel(String key)
+        public Level getLevel(string key)
         {
             
             levelDictionary = deserializeLevelsFromXML();
@@ -312,7 +315,6 @@ namespace Theseus_vs_Minotaur_library
 
 
         }
-        
         
     }
 

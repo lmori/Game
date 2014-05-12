@@ -49,6 +49,8 @@
     <Compile Include="PlayerRating.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="GameRating.cs" />
+    <Compile Include="SaveGame.cs" />
+    <Compile Include="SaveGameList.cs" />
     <Compile Include="Score.cs" />
     <Compile Include="ScoreList.cs" />
     <Compile Include="StorageController.cs" />

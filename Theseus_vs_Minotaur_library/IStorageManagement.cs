@@ -9,18 +9,9 @@ namespace Theseus_vs_Minotaur_library
     interface IStorageManagement
     {
         //void addScore ();
-        // void addPlayerRating();
-        // void publishLevel();
-        // void deleteLevel();
-        //void getLevels();
-        // void getCurrentUser();
-        // void getOnlineLevelDictionary();
-        // void getLocalLevelDictionary();
-        // void saveGame();
-        // void loadGame();
-        // void getAllSaves();
-        // void saveScore();
-        // void getAllScores();
+        //Level getLevel(string Key);
+        //void LoadGame();
+        //void GetAllSaves(string levelName);
     }
 }
 
