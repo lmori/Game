@@ -27,7 +27,7 @@ namespace Theseus_vs_minotaur_ui
 
             //First Page to be displayed
 
-            Application.Run(new LOGIN());
+            
            
 
             bool[][] verWallArray = new bool[3][];
@@ -43,9 +43,10 @@ namespace Theseus_vs_minotaur_ui
 
             int[] dim = { 4, 3 };
 
-          //  GameController.CurrentLevel = testLevel;
+           
 
-           Level testLevel = new Level("test.xml" , "First Level", "Me", 1, 1, 2, 2,4,2, verWallArray, horWallArray, dim,true);
+           Level testLevel = new Level("test.xml" , "First Level", "Me", 2, 1, 2, 3,4,2, verWallArray, horWallArray, dim,true);
+           GameController.CurrentLevel = testLevel;
 
             //Testing level into dictionary and out to xml file
          //  LevelDictionary<string, Level> levelDictionary = new LevelDictionary<string, Level>();
@@ -61,12 +62,12 @@ namespace Theseus_vs_minotaur_ui
           
 
             //choose as needed to test...
-            
-           // Application.Run(new GamePlayForm());
+           Application.Run(new LOGIN());
+            //Application.Run(new GamePlayForm());
             //Application.Run(new SaveLevel());
 
             //Application.Run(new START());
-            Application.Run(new LOGIN());
+           // Application.Run(new LOGIN());
             //Application.Run(new LevelBrowser());
 
             //Application.Run(new Form1());

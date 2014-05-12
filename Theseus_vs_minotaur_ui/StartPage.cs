@@ -41,7 +41,7 @@ namespace Theseus_vs_minotaur_ui
 
         private void button2_Click(object sender, EventArgs e)
         {
-            LevelBrowser lBrow = new LevelBrowser();
+            GamePlayForm lBrow = new GamePlayForm();//for demo purposes
             this.Hide();
             lBrow.ShowDialog();
             
