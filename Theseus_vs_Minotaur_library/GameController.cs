@@ -11,7 +11,7 @@ using System.IO;
 namespace Theseus_vs_Minotaur_library
 {
 
-    public static class GameController : IStorageManagement
+    public static class GameController
     {
         static Level currentLevel;
         static Theseus myTheseus = new Theseus();
@@ -20,7 +20,7 @@ namespace Theseus_vs_Minotaur_library
         static List<Direction> moveList = new List<Direction>();
         static float timer;
 
-        public static Theseus MyTheseus
+        static List<SaveGame> savedGame=new List<SaveGame>();
 
         public static Theseus MyTheseus
         {

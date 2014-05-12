@@ -26,6 +26,7 @@ namespace Theseus_vs_minotaur_ui
            // Application.Run(new Form1());
 
             //First Page to be displayed
+
             Application.Run(new LOGIN());
            
 
@@ -42,30 +43,30 @@ namespace Theseus_vs_minotaur_ui
 
             int[] dim = { 4, 3 };
 
-            GameController.CurrentLevel = testLevel;
+          //  GameController.CurrentLevel = testLevel;
 
-           Level testLevel = new Level("test.xml" , "First Level", "Me", 1, 1, 2, 2, verWallArray, horWallArray, dim,true);
+           Level testLevel = new Level("test.xml" , "First Level", "Me", 1, 1, 2, 2,4,2, verWallArray, horWallArray, dim,true);
 
             //Testing level into dictionary and out to xml file
-           LevelDictionary<string, Level> levelDictionary = new LevelDictionary<string, Level>();
+         //  LevelDictionary<string, Level> levelDictionary = new LevelDictionary<string, Level>();
 
             //is the filename the key?
-           levelDictionary.Add(testLevel.LevelName, testLevel);
+         //  levelDictionary.Add(testLevel.LevelName, testLevel);
 
-           StreamWriter writer = new StreamWriter(@"h:\levels.xml");
-           XmlSerializer serialiser = new XmlSerializer(levelDictionary.GetType());
-           serialiser.Serialize(writer, levelDictionary);
+          // StreamWriter writer = new StreamWriter(@"h:\levels.xml");
+          // XmlSerializer serialiser = new XmlSerializer(levelDictionary.GetType());
+         //  serialiser.Serialize(writer, levelDictionary);
 
       
           
->>>>>>> master
+
             //choose as needed to test...
             
-            Application.Run(new GamePlayForm());
+           // Application.Run(new GamePlayForm());
             //Application.Run(new SaveLevel());
 
             //Application.Run(new START());
-            //Application.Run(new LOGIN());
+            Application.Run(new LOGIN());
             //Application.Run(new LevelBrowser());
 
             //Application.Run(new Form1());

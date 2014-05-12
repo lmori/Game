@@ -304,8 +304,8 @@ namespace Theseus_vs_Minotaur_library
             score.LevelTime = levelTime;
 
             // Get and assign the current level (game controller needs to be a singleton pattern otherwise more then 1 instance will be made to access current Level like shown below)
-            GameController game = new GameController();
-            score.TheLevel = game.CurrentLevel;
+           // GameController game = new GameController();
+            score.TheLevel = GameController.CurrentLevel;
 
             //get and assign the user
             score.TheUser = this.CurrentUser;
