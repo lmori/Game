@@ -33,8 +33,7 @@ namespace Theseus_vs_minotaur_ui
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-           //Just checking item selected is correct, will be taken out
-                MessageBox.Show("You selected " + UsersBox.SelectedItem.ToString());
+         
         }
 
         private void LoginPage_Load(object sender, EventArgs e)
@@ -77,9 +76,7 @@ namespace Theseus_vs_minotaur_ui
             {
                 var selected = getSelected();
 
-                storage.CurrentUser.Username = selected;
-               //storage.updateCurrent(selected);
-                
+                storage.CurrentUser.Username = selected; 
 
                 START start = new START();
                 this.Hide();

@@ -29,7 +29,7 @@ namespace Theseus_vs_minotaur_ui
 
         private void saveLevelOk_Click(object sender, EventArgs e)
         {
-            storage.SerializeLevelsToXML();
+            //Call the save level method from storage controller when this part is created
             this.Hide();
           
         }

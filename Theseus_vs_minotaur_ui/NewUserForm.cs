@@ -23,8 +23,6 @@ namespace Theseus_vs_minotaur_ui
         {
             InitializeComponent();
           
-            
-
         }
 
         public string getUserName()
@@ -109,7 +107,7 @@ namespace Theseus_vs_minotaur_ui
             LOGIN logform = new LOGIN();
             logform.ShowDialog();
             //storage.SerializeToXML();
-
+            
         }
 
 

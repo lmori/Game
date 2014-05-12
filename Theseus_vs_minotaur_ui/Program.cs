@@ -4,7 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Theseus_vs_Minotaur_library;
-
+using System.IO;
+using System.Xml.Serialization;
 
 namespace Theseus_vs_minotaur_ui
 {
@@ -37,8 +38,17 @@ namespace Theseus_vs_minotaur_ui
 
             int[] dim = {3,3};
 
-           Level testLevel = new Level("", "", "", 1, 1, 2, 2, verWallArray, horWallArray, dim,true);
+           Level testLevel = new Level("test", "bfd", "gfd", 1, 1, 2, 2, verWallArray, horWallArray, dim,true);
 
+
+           LevelDictionary<string, Level> levelDictionary = new LevelDictionary<string, Level>();
+
+           levelDictionary.Add(testLevel.FileName, testLevel);
+          
+
+
+      
+          
             //choose as needed to test...
             
          //   Application.Run(new GamePlayForm(testLevel));

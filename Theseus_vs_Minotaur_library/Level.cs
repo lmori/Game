@@ -7,6 +7,8 @@ using System.Xml.Serialization;
 
 namespace Theseus_vs_Minotaur_library
 {
+
+[Serializable]
     public class Level
     {
         private string fileName;
@@ -128,6 +130,10 @@ namespace Theseus_vs_Minotaur_library
             HorizontalWallArray = horizontalWallArray;
             GridSize = gridSize;
             isLevelFinished = levelFinished;
+        }
+        public Level()
+        {
+
         }
 
        

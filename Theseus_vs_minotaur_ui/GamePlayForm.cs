@@ -13,18 +13,19 @@ namespace Theseus_vs_minotaur_ui
 {
     public partial class GamePlayForm : Form
     {
+
         //GameController myGameController for future use ;
         Level myTestingLevel; //for test purposes
-        
+
         //initialize the 
         int cellHeight;
         int cellWidth;
-        
+
         //set the pixel width for walls
         int wallWidth = 5;
 
         private Bitmap wallsAndExit;
-        
+
 
         public GamePlayForm(Level testLevel)
         {
@@ -46,14 +47,14 @@ namespace Theseus_vs_minotaur_ui
             Graphics graphicsObj = e.Graphics;
             graphicsObj.DrawImage(wallsAndExit, 0, 0, wallsAndExit.Width, wallsAndExit.Height);
             graphicsObj.DrawImage(wallsAndExit, 0, 0, wallsAndExit.Width, wallsAndExit.Height);
-            graphicsObj.Dispose();        
+            graphicsObj.Dispose();
         }
 
         private void DrawWallsAndExit()
         {
 
             Graphics graphicsObj;
-            wallsAndExit = new Bitmap(this.pnlGameBoard.Width, this.pnlGameBoard.Height, 
+            wallsAndExit = new Bitmap(this.pnlGameBoard.Width, this.pnlGameBoard.Height,
                                         System.Drawing.Imaging.PixelFormat.Format24bppRgb);
             graphicsObj = Graphics.FromImage(wallsAndExit);
             graphicsObj.Clear(Color.White);
@@ -109,7 +110,31 @@ namespace Theseus_vs_minotaur_ui
         {
 
         }
-        
 
+        private void btnHighScores_Click(object sender, EventArgs e)
+        {
+            /* This will need to be added to the high scores dialog box form on load when it 
+                is created to populate the high scores list box
+
+            
+             if (File.Exists(@"h:\scores.xml"))
+             {
+                 //get list of scores from xml file "users.xml"
+                 var scoreList = storage.deserializeScoresFromXML();
+
+//For every score in the list populate the list box with the user and the score - temp name of listbox = ListBoxScore
+                 foreach (Score s in scoreList.Scores)
+                 {
+                     ListBoxScore.Items.Add(s.Username + s.userScore);
+
+                 }
+
+             }
+
+             else {
+                 ListBoxScore.Items.Add("No High Scores Exist" );
+         }
+     }*/
+        }
     }
 }
