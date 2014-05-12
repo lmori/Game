@@ -39,11 +39,9 @@ namespace Theseus_vs_minotaur_ui
         int[][] minotaurMoves;
 
         //contructor. Will in future probably just set the gameController and get the images. may not take a level as an argument... level may be set elsewhere
-        public GamePlayForm(Level testLevel)
+        public GamePlayForm()
         {
-            InitializeComponent();
-
-GameController.CurrentLevel = testLevel;//Possibly not as an argument but by looking into the form that opens this one and copy reference.
+            InitializeComponent();            
             //get the images from disk
             theseusImage = new Bitmap(GameController.MyTheseus.SpritePath);
             minotaurImage = new Bitmap(GameController.MyMinotaur.SpritePath);
@@ -130,8 +128,7 @@ GameController.CurrentLevel = testLevel;//Possibly not as an argument but by loo
            return result;
         }
 
-        //update the walls and exit bitmap to reflect the level arrays
-//currently only draws the walls.. Exit will be easy
+
         private void DrawWallsAndExit()
         {
             
@@ -216,8 +213,7 @@ GameController.CurrentLevel = testLevel;//Possibly not as an argument but by loo
             graphicsObj.Dispose();
         }
 
-//this timer's event method is responsible for redrawing characters to create movement.
-//currently is hard coded and needs more work 
+
         private void timerStep_Tick(object sender, EventArgs e)
         {
            

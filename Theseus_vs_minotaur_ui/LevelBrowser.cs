@@ -93,9 +93,8 @@ namespace Theseus_vs_minotaur_ui
             List<Level> pageLevels = displaySet[0];
 
             // cycle through each level and display the data in the form
-            for (int i = 0; i < numLevels; i++){
-                this.lblLevelDifficulty + i + .Text
-            }
+           /* for (int i = 0; i < numLevels; i++){
+            }*/
             
 
         }

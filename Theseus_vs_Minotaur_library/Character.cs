@@ -113,22 +113,32 @@ namespace Theseus_vs_Minotaur_library
         }
 
 
-        // MAKE THE FIRST MOVE
-        public int[][] CompleteMove()
+        // The Minotaur always moves twice so method returns an array with two sets of xy ints
+        public int[][] Move()
         {
             // Define variables
             int[][] minotaurMoves = new int[2][];
             minotaurMoves[0] = new int[2];
             minotaurMoves[1] = new int[2];
+
             int theseusX, theseusY;
-            int minotaurX, minotaurY, newMinotaurX, newMinotaurY;
+            int minotaurX, minotaurY;
+            int newMinotaurX = 0;
+            int newMinotaurY = 0;
 
-            bool moveFailed = false;
-            int currentMove = 0;
+            int moveOneMinotaurX = 0;
+            int moveOneMinotaurY = 0;
 
-            // Find out where Theseus is
+            int moveTwoMinotaurX = 0;
+            int moveTwoMinotaurY = 0;
+
+            int moveCount = 0;
+
+
+            // Get the location of Theseus
             theseusX = GameController.MyTheseus.XPosition;
             theseusY = GameController.MyTheseus.YPosition;
+
 
             // Find out where Minotaur is.
             minotaurX = GameController.MyMinotaur.XPosition;
@@ -136,117 +146,175 @@ namespace Theseus_vs_Minotaur_library
 
 
 
-
-            // Compare horozontial locations to get to Theseus
-
-            // If Theseus is to the left of the Minotaur.
+            // If Theseus horizontal position is left of Minotaur.
             if (theseusX < minotaurX)
             {
-                if (GameController.CurrentLevel.IsWall(minotaurX, minotaurY, Direction.Left) == false)
-                {
-                    newMinotaurX = minotaurX - 1;
+                // Check if wall exists when Minotaur is moving left. NO WALL in way.
+                if (GameController.CurrentLevel.IsWall(minotaurX, minotaurY,
 
-                    // Add 1 to the move count.
-                    currentMove = currentMove + 1;
+Direction.Left) == false)
+                {
+                    // Set the new position for the minotaur.
+                    moveOneMinotaurX = minotaurX - 1;
+
+                    // Increase moveCount for minotaur.
+                    moveCount = moveCount + 1;
                 }
+
+                // Wall is in the way moving horizontal.
                 else
                 {
-                    newMinotaurX = minotaurX;
-                    moveFailed = true;
+                    // Set the new position for the minotaur.
+                    moveOneMinotaurX = minotaurX;
                 }
             }
 
-            // if Theseus is to the right of the Minotaur
+            // If Theseus horizontal position is right of Minotaur.
             else if (theseusX > minotaurX)
             {
-                if (GameController.CurrentLevel.IsWall(minotaurX, minotaurY, Direction.Right) == false)
+                // Check if wall exists when Minotaur is moving right. 
+                // NO WALL in way.
+                if (GameController.CurrentLevel.IsWall(minotaurX, minotaurY,
+
+Direction.Right) == false)
                 {
-                    newMinotaurX = minotaurX + 1;
-                    currentMove = currentMove + 1;
+                    // Set the new position for the minotaur.
+                    moveOneMinotaurX = minotaurX + 1;
+
+                    // Increase moveCount for minotaur.
+                    moveCount = moveCount + 1;
                 }
+
+                // Wall is in the way moving horizontal.
                 else
                 {
-                    newMinotaurX = minotaurX;
-                    moveFailed = true;
+                    // Set the new position for the minotaur.
+                    moveOneMinotaurX = minotaurX;
                 }
             }
 
-            // Otherwise if the horizontal values match
+            // If Theseus horizontal position is the same as Minotaurs.
             else
             {
-                newMinotaurX = minotaurX;
+                // Set the new position for the minotaur.
+                moveOneMinotaurX = minotaurX;
             }
 
+            moveOneMinotaurY = minotaurY;
 
-            // Compare vertical locations to get to Theseus
 
-            // if theseus is above the minotaur
+            // Either moveCount = 0, if no moves made or moveCount = 1 if 1 move made.
+
+
+            // Try to move the minotaur vertically.
+            // If Theseus is below the Minotaur.
             if (theseusY < minotaurY)
             {
-                if (GameController.CurrentLevel.IsWall(newMinotaurX, minotaurY, Direction.Up) == false)
+                // Check if wall exists when Minotaur is moving Up. 
+                // NO WALL in way.
+                if (GameController.CurrentLevel.IsWall(moveOneMinotaurX, minotaurY,
+
+Direction.Up) == false)
                 {
+                    // Set the new position for the minotaur.
                     newMinotaurY = minotaurY - 1;
-                    currentMove = currentMove + 1;
+
+                    // Increase moveCount for minotaur.
+                    moveCount = moveCount + 1;
+
+                    // If the moveCount is less than two, try to move horizontally.
+                    if (moveCount < 2)
+                    {
+                        // If Theseus horizontal position is left of Minotaur.
+                        if (theseusX < moveOneMinotaurX)
+                        {
+                            // Check if wall exists when Minotaur is moving right. 
+                            // NO WALL in way.
+                            if (GameController.CurrentLevel.IsWall(moveOneMinotaurX,
+
+minotaurY, Direction.Right) == false)
+                            {
+                                // Set the new position for the minotaur.
+                                moveOneMinotaurX = moveOneMinotaurX + 1;
+
+                                // Increase moveCount for minotaur.
+                                moveCount = moveCount + 1;
+                            }
+                        }
+
+                        else if (theseusX > minotaurY)
+                        {
+                            // Check if wall exists when Minotaur is moving right. 
+                            // NO WALL in way.
+                            if (GameController.CurrentLevel.IsWall(moveOneMinotaurX,
+
+minotaurY, Direction.Left) == false)
+                            {
+                                // Set the new position for the minotaur.
+                                moveOneMinotaurX = moveOneMinotaurX - 1;
+
+                                // Increase moveCount for minotaur.
+                                moveCount = moveCount + 1;
+                            }
+                        }
+                    }
                 }
                 else
                 {
+                    // Set the new position for the minotaur.
                     newMinotaurY = minotaurY;
                 }
             }
 
-
-            // if Theseus is below the Minotaur
+            // If Theseus is above the Minotaur.
             else if (theseusY > minotaurY)
             {
-                if (GameController.CurrentLevel.IsWall(newMinotaurX, minotaurY, Direction.Down) == false)
+                // Check if wall exists when Minotaur is moving Down. 
+                // NO WALL in way.
+                if (GameController.CurrentLevel.IsWall(moveOneMinotaurX, minotaurY,
+
+Direction.Down) == false)
                 {
+                    // Set the new position for the minotaur.
                     newMinotaurY = minotaurY + 1;
-                    currentMove = currentMove + 1;
                 }
                 else
                 {
+                    // Set the new position for the minotaur.
                     newMinotaurY = minotaurY;
                 }
             }
 
+            // If Theseus vertical position is the same as Minotaurs.
             else
             {
+                // Set the new position for the minotaur.
                 newMinotaurY = minotaurY;
             }
 
-            // Check the vertical move is valid (no walls/out of bounds/etc)
-            // if (!GameController.CurrentLevel.IsWall(newY, newX, horizontalMove))
 
-            minotaurMoves[0][0] = newMinotaurX;
 
+            GameController.MyMinotaur.XPosition = moveOneMinotaurX;
+            GameController.MyMinotaur.YPosition = newMinotaurY;
+
+            // Set the move 
+            if (moveOneMinotaurX == minotaurX)
+            {
+                minotaurY = newMinotaurY;
+            }
+
+            minotaurMoves[0][0] = moveOneMinotaurX;
             minotaurMoves[0][1] = minotaurY;
-
-            minotaurMoves[1][0] = newMinotaurX;
-
+            minotaurMoves[1][0] = moveOneMinotaurX;
             minotaurMoves[1][1] = newMinotaurY;
 
-
-            // This updates the starting positions of the minotaur, CHECK FOR CONFLICTS?
-            GameController.MyMinotaur.YPosition = newMinotaurY;
-            GameController.MyMinotaur.XPosition = newMinotaurX;
-
-            moveFailed = false;
+           
 
             return minotaurMoves;
         }
 
 
 
-        // The Minotaur always moves twice so method returns an array with two sets of xy ints
-        public int[][] Move () 
-        {
-            int[][] minotaurMoves = new int[2][];
-
-
-            minotaurMoves = CompleteMove();
-
-            return minotaurMoves;
-        }
     }
     public class Exit : Character
     {

@@ -38,15 +38,15 @@ namespace Theseus_vs_minotaur_ui
             int[] dim = { 4, 3 };
 
             Level testLevel = new Level("", "Dam You", "Bob", 2, 1, 2, 3,4,2, verWallArray, horWallArray, dim,true);
-
+            GameController.CurrentLevel = testLevel;
             //choose as needed to test...
             
-            //Application.Run(new GamePlayForm(testLevel));
+            Application.Run(new GamePlayForm());
             //Application.Run(new SaveLevel());
 
             //Application.Run(new START());
             //Application.Run(new LOGIN());
-            Application.Run(new LevelBrowser());
+            //Application.Run(new LevelBrowser());
 
             //Application.Run(new Form1());
 
