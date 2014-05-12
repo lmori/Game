@@ -157,20 +157,22 @@ namespace Theseus_vs_Minotaur_library
 
         }
         public void SaveLevel(String fileName, String levelName, String creatorName, int minotaurXPosition, int minotaurYPosition,
-                    int theseusXPosition, int theseusYPosition, bool[][] verticalWallArray, bool[][] horizontalWallArray, int[] gridSize, bool levelFinished)
+                    int theseusXPosition, int theseusYPosition, int exitXPosition, int exitYPosition, bool[][] verticalWallArray, bool[][] horizontalWallArray, int[] gridSize, bool levelFinished)
          {
             //file name is the same as the level name
 
-             Level lev = new Level(fileName, levelName, creatorName, minotaurXPosition, minotaurYPosition, theseusXPosition, theseusYPosition, 
-                 verticalWallArray, horizontalWallArray, gridSize, levelFinished);
-
+             Level lev = new Level(fileName, levelName, creatorName, minotaurXPosition, minotaurYPosition, theseusXPosition,
+                 theseusYPosition, exitXPosition, exitYPosition, verticalWallArray, horizontalWallArray, gridSize, levelFinished);
+            
             lev.FileName = fileName;
-           lev.LevelName = levelName ;
-           lev.CreatorName = creatorName;
+            lev.LevelName = levelName ;
+            lev.CreatorName = creatorName;
             lev.MinotaurXPosition = minotaurXPosition;
             lev.TheseusXPosition = theseusXPosition;
             lev.MinotaurYPosition = minotaurYPosition;
             lev.TheseusYPosition = theseusYPosition;
+            lev.ExitXPosition = exitXPosition;
+            lev.ExitYPosition = exitYPosition;
             lev.VerticalWallArray = verticalWallArray;
             lev.HorizontalWallArray = horizontalWallArray;
 

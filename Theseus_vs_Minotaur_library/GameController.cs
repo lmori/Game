@@ -6,39 +6,41 @@ using System.Threading.Tasks;
 
 namespace Theseus_vs_Minotaur_library
 {
-    public class GameController
+    public static class GameController
     {
-        Level currentLevel; 
-        Theseus myTheseus;
-        Minotaur myMinotaur;
-        List<Direction> moveList = new List<Direction>();
-        float timer;
+        static Level currentLevel;
+        static Theseus myTheseus = new Theseus();
+        static Minotaur myMinotaur = new Minotaur();
+        static Exit myExit = new Exit();
+        static List<Direction> moveList = new List<Direction>();
+        static float timer;
 
-        public GameController()
-        {
-            myTheseus = new Theseus(this);
-            myMinotaur = new Minotaur(this);
-        }
-
-        public Theseus MyTheseus
+        public static Theseus MyTheseus
         {
             get { return myTheseus; }
             set { myTheseus = value; }
         }
 
-        public Minotaur MyMinotaur
+        public static Minotaur MyMinotaur
         {
             get { return myMinotaur; }
             set { myMinotaur = value; }
         }
+
+        public static Exit MyExit
+        {
+            get { return GameController.myExit; }
+            set { GameController.myExit = value; }
+        }
+
         
-        public float Timer
+        public static float Timer
         {
             get { return timer; }
             set { timer = value; }
         }
 
-        public Level CurrentLevel
+        public static Level CurrentLevel
         {
             get { return currentLevel; }
             set 
@@ -49,13 +51,59 @@ namespace Theseus_vs_Minotaur_library
                 myMinotaur.YPosition = currentLevel.MinotaurYPosition;
                 myTheseus.XPosition = currentLevel.TheseusXPosition;
                 myTheseus.YPosition = currentLevel.TheseusYPosition;
+                myExit.XPosition = currentLevel.ExitXPosition;
+                myExit.YPosition = currentLevel.ExitYPosition;
+                
             }
         }
 
-        public void LogMove(Direction direction)
+        public static void LogMove(Direction direction)
         {
-            this.moveList.Add(direction);
+            moveList.Add(direction);
         }
+
+        public static bool CheckGameWon()
+        {
+            bool result;
+            if (MyExit.XPosition == MyTheseus.XPosition)
+            {
+                if (MyExit.YPosition == myTheseus.YPosition)
+                {
+                    result = true;
+                }
+                else
+                {
+                    result = false;
+                }
+            }
+            else
+            {
+                result = false;
+            }
+            return result;
+        }
+
+        public static bool CheckGameLost()
+        {
+            bool result;
+            if (MyMinotaur.XPosition == MyTheseus.XPosition)
+            {
+                if (MyMinotaur.YPosition == myTheseus.YPosition)
+                {
+                    result = true;
+                }
+                else
+                {
+                    result = false;
+                }
+            }
+            else
+            {
+                result = false;
+            }
+            return result;
+        }
+
     }
 
     public enum Direction
@@ -66,6 +114,4 @@ namespace Theseus_vs_Minotaur_library
         Up,
         Down        
     }
-
-
 }

@@ -34,6 +34,14 @@ namespace Theseus_vs_Minotaur_library
         private int minotaurYPosition;
         [XmlElement(ElementName = "Minotaur Y Position")]
 
+        // Initial level starting position
+        private int exitXPosition;      
+        [XmlElement(ElementName = "Exit X Position")]
+
+        // Initial level starting position
+        private int exitYPosition;
+        [XmlElement(ElementName = "Exit Y Position")]
+
         private bool[][] verticalWallArray;
         [XmlElement(ElementName = "Vertical Wall Array")]
 
@@ -89,6 +97,18 @@ namespace Theseus_vs_Minotaur_library
             get { return theseusYPosition; }
             set { theseusYPosition = value; }
         }
+        public int ExitXPosition
+        {
+            get { return exitXPosition; }
+            set { exitXPosition = value; }
+        }
+
+        public int ExitYPosition
+        {
+            get { return exitYPosition; }
+            set { exitYPosition = value; }
+        }
+
 
         public string CreatorName
         {
@@ -115,7 +135,8 @@ namespace Theseus_vs_Minotaur_library
         }
 
         public Level(String fileName, String levelName, String creatorName, int minotaurXPosition, int minotaurYPosition,
-                    int theseusXPosition, int theseusYPosition, bool[][] verticalWallArray, bool[][] horizontalWallArray, int[] gridSize, bool levelFinished)
+                    int theseusXPosition, int theseusYPosition, int exitXPosition, int exitYPosition,
+                    bool[][] verticalWallArray, bool[][] horizontalWallArray, int[] gridSize, bool levelFinished)
         {
             FileName = fileName;
             LevelName = levelName;
@@ -124,6 +145,8 @@ namespace Theseus_vs_Minotaur_library
             MinotaurYPosition = minotaurYPosition;
             TheseusXPosition = theseusXPosition;
             TheseusYPosition = theseusYPosition;
+            ExitXPosition = exitXPosition;
+            ExitYPosition = exitYPosition;
             VerticalWallArray = verticalWallArray;
             HorizontalWallArray = horizontalWallArray;
             GridSize = gridSize;
@@ -132,10 +155,8 @@ namespace Theseus_vs_Minotaur_library
 
        
 
-        //renamed the method from "CanMove" to "IsWall". Changed the parameters it takes
-        //from "oldXPosition.." to column and "oldYPosition" to "row"
-        //Method takes a column and a row and a direction. It returns a boolean of whether a wall is in that direction
-        //suggested usage - if IsWall(column, row, direction) == false then move else dont 
+
+        //suggested usage - if IsWall(x, y, direction) == false then move else dont 
         public bool IsWall(int x, int y, Direction direction)
         {
             int innerArray, innerArrayIndex;
@@ -169,6 +190,7 @@ namespace Theseus_vs_Minotaur_library
                     break;
                 case Direction.NoChange:
                     result = false;
+                    Console.WriteLine(result);
                     break;
             }
             return result;

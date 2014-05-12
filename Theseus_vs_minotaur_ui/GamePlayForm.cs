@@ -13,7 +13,7 @@ namespace Theseus_vs_minotaur_ui
 {
     public partial class GamePlayForm : Form
     {
-        GameController myGameController;   
+
         //initialize the variables to store cell dimensions
         int cellHeight;
         int cellWidth;
@@ -35,46 +35,43 @@ namespace Theseus_vs_minotaur_ui
         //initialize more related varibles
         int stepCount = 0;
         int totalSteps = 2;
-        
-        bool isCharacterMoving;
+
         int[][] minotaurMoves;
 
         //contructor. Will in future probably just set the gameController and get the images. may not take a level as an argument... level may be set elsewhere
         public GamePlayForm(Level testLevel)
         {
             InitializeComponent();
-//lines of coded without tabbing like this is is generally going to change and is used for testing
-myGameController = new GameController();//these 2 lines will be replaced when further developed as form will take only a gameController.
-myGameController.CurrentLevel = testLevel;//Possibly not as an argument but by looking into the form that opens this one and copy reference.
+
+GameController.CurrentLevel = testLevel;//Possibly not as an argument but by looking into the form that opens this one and copy reference.
             //get the images from disk
-            theseusImage = new Bitmap(myGameController.MyTheseus.SpritePath);
-            minotaurImage = new Bitmap(myGameController.MyMinotaur.SpritePath);
+            theseusImage = new Bitmap(GameController.MyTheseus.SpritePath);
+            minotaurImage = new Bitmap(GameController.MyMinotaur.SpritePath);
         }
         
         //sets the form varibles which are dependent on the users screen resolution.
         private void ScaleToScreen()
         {
             //calculate the cell dimensions based on screen size
-            cellWidth = ((this.pnlGameBoard.Width - wallWidth) / myGameController.CurrentLevel.GridSize[0]);
-            cellHeight = ((this.pnlGameBoard.Height - wallWidth) / myGameController.CurrentLevel.GridSize[1]);
+            cellWidth = ((this.pnlGameBoard.Width - wallWidth) / GameController.CurrentLevel.GridSize[0]);
+            cellHeight = ((this.pnlGameBoard.Height - wallWidth) / GameController.CurrentLevel.GridSize[1]);
             //set the x,y pixels of the characters
-            minotaurCurrentXPixel = calculateCharacterXPixel(myGameController.MyMinotaur.XPosition);
-            minotaurCurrentYPixel = calculateCharacterYPixel(myGameController.MyMinotaur.YPosition);
+            minotaurCurrentXPixel = calculateCharacterXPixel(GameController.MyMinotaur.XPosition);
+            minotaurCurrentYPixel = calculateCharacterYPixel(GameController.MyMinotaur.YPosition);
             minotaurGoalXPixel = minotaurCurrentXPixel;
             minotaurGoalYPixel = minotaurCurrentYPixel;
-            theseusCurrentXPixel = calculateCharacterXPixel(myGameController.MyTheseus.XPosition);
-            theseusCurrentYPixel = calculateCharacterYPixel(myGameController.MyTheseus.YPosition);
+            theseusCurrentXPixel = calculateCharacterXPixel(GameController.MyTheseus.XPosition);
+            theseusCurrentYPixel = calculateCharacterYPixel(GameController.MyTheseus.YPosition);
             theseusGoalXPixel = theseusCurrentXPixel;
             theseusGoalYPixel = theseusCurrentYPixel;
             //draw the walls and exit. This only needs to be done once and can be set as the panel background image
             DrawWallsAndExit();
             pnlGameBoard.BackgroundImage = wallsAndExit; // if this was in the paint event the level would flicker.
         }
+
         private void GamePlayForm_Load(object sender, EventArgs e)
         {
-            ScaleToScreen(); 
-            
-
+            ScaleToScreen();
         }
         
         //paint method responsible for moving characters
@@ -92,16 +89,16 @@ myGameController.CurrentLevel = testLevel;//Possibly not as an argument but by l
         private void TheseusMove(Direction direction)
         {
             //change the library data for the theseus first 
-            myGameController.MyTheseus.Move(direction);
+            GameController.MyTheseus.Move(direction);
             // set the goal position of the theseus. The timer tick method runs until the goal and current position are the same.
-            theseusGoalXPixel = calculateCharacterXPixel(myGameController.MyTheseus.XPosition);
-            theseusGoalYPixel = calculateCharacterYPixel(myGameController.MyTheseus.YPosition);
+            theseusGoalXPixel = calculateCharacterXPixel(GameController.MyTheseus.XPosition);
+            theseusGoalYPixel = calculateCharacterYPixel(GameController.MyTheseus.YPosition);
             //reset the step count to 0 before running the timer. This is used to check the state of the incremental move of the character
             //vs the number of steps required
             stepCount = 0;
             //start the timer - responsible for causing the form to repaint
             timerStep.Start();
-            minotaurMoves = myGameController.MyMinotaur.Move();
+            minotaurMoves = GameController.MyMinotaur.Move();
         }
 
         private void MinotaurMove(int moveNum)
@@ -137,6 +134,7 @@ myGameController.CurrentLevel = testLevel;//Possibly not as an argument but by l
 //currently only draws the walls.. Exit will be easy
         private void DrawWallsAndExit()
         {
+            
             Graphics graphicsObj;
             //initialize a bitmap instance for the walls and exit
             wallsAndExit = new Bitmap(this.pnlGameBoard.Width, this.pnlGameBoard.Height, 
@@ -155,7 +153,7 @@ myGameController.CurrentLevel = testLevel;//Possibly not as an argument but by l
             int xposition = 0;
             int yposition = 0;
             //iterate through the horizontal array picking out the wall arrays for each row
-            foreach (bool[] wallArray in myGameController.CurrentLevel.VerticalWallArray)
+            foreach (bool[] wallArray in GameController.CurrentLevel.VerticalWallArray)
             {
                 //start at the left hand side for each wall array
                 xposition = 0;
@@ -192,7 +190,7 @@ myGameController.CurrentLevel = testLevel;//Possibly not as an argument but by l
             //follow the same pattern for the horizontal walls
             yposition = 0;
             xposition = 0;
-            foreach (bool[] wallArray in myGameController.CurrentLevel.HorizontalWallArray)
+            foreach (bool[] wallArray in GameController.CurrentLevel.HorizontalWallArray)
             {
                 xposition = wallWidth;
                 foreach (bool wall in wallArray)
@@ -211,6 +209,10 @@ myGameController.CurrentLevel = testLevel;//Possibly not as an argument but by l
                 }
                 yposition += cellHeight;
             }
+            int exitXPixel = calculateCharacterXPixel(GameController.MyExit.XPosition);
+            int exitYpixel = calculateCharacterYPixel(GameController.MyExit.YPosition);
+            Bitmap exitImage = new Bitmap(GameController.MyExit.SpritePath);
+            graphicsObj.DrawImage(exitImage, exitXPixel, exitYpixel, cellWidth / 2, cellHeight / 2);
             graphicsObj.Dispose();
         }
 
@@ -223,6 +225,18 @@ myGameController.CurrentLevel = testLevel;//Possibly not as an argument but by l
                minotaurCurrentXPixel == minotaurGoalXPixel && minotaurCurrentYPixel == minotaurGoalYPixel)
            {
                timerStep.Stop();
+
+               if (GameController.CheckGameWon() == true)
+               {
+                   MessageBox.Show("Congratulations! You win!");
+                   
+               } 
+               else if (GameController.CheckGameLost() == true)
+               {
+                   MessageBox.Show("Game Over. You Lose.");
+               }
+               
+               
            } 
            else if (theseusCurrentXPixel != theseusGoalXPixel)
            {
@@ -297,11 +311,9 @@ myGameController.CurrentLevel = testLevel;//Possibly not as an argument but by l
                    stepCount += 1;
                    pnlGameBoard.Invalidate();
                }
-
-           } 
-
-
+           }
         }
+
         //rescales the form when the user resizes the window
         private void GamePlayForm_Resize(object sender, EventArgs e)
         {
@@ -332,7 +344,5 @@ myGameController.CurrentLevel = testLevel;//Possibly not as an argument but by l
         {
             TheseusMove(Direction.NoChange);
         }
-        
-
     }
 }
