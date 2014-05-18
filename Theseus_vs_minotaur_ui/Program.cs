@@ -62,7 +62,8 @@ namespace Theseus_vs_minotaur_ui
           
 
             //choose as needed to test...
-           Application.Run(new LOGIN());
+            Application.Run(new LevelDesigner());
+            //Application.Run(new LOGIN());
             //Application.Run(new GamePlayForm());
             //Application.Run(new SaveLevel());
 
