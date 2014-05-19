@@ -137,7 +137,7 @@ namespace Theseus_vs_Minotaur_library
             var userList = new UserList();
 
             XmlSerializer deserializer = new XmlSerializer(typeof(UserList));
-            using (StreamReader textReader = new StreamReader(@"users.xml")) //changed path from absolute to relative paths
+            using (StreamReader textReader = new StreamReader(@"users.xml")) //changed path from absolute to relative paths, so it works on other computers than CPIT
                 userList = (UserList)deserializer.Deserialize(textReader);
 
                 textReader.Close();
