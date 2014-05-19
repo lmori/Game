@@ -143,10 +143,7 @@ C:\Users\paul\Documents\GitHub\Game\Theseus_vs_minotaur_ui\bin\Debug\Theseus_vs_
 C:\Users\paul\Documents\GitHub\Game\Theseus_vs_minotaur_ui\bin\Debug\Theseus_vs_Minotaur_library.pdb
 C:\Users\paul\Documents\GitHub\Game\Theseus_vs_minotaur_ui\obj\Debug\Theseus_vs_minotaur_ui.csprojResolveAssemblyReference.cache
 C:\Users\paul\Documents\GitHub\Game\Theseus_vs_minotaur_ui\obj\Debug\Theseus_vs_minotaur_ui.NewProject.resources
-C:\Users\paul\Documents\GitHub\Game\Theseus_vs_minotaur_ui\obj\Debug\Theseus_vs_Minotaur_library.LOGIN.resources
-C:\Users\paul\Documents\GitHub\Game\Theseus_vs_minotaur_ui\obj\Debug\Theseus_vs_Minotaur_library.userNameForm.resources
 C:\Users\paul\Documents\GitHub\Game\Theseus_vs_minotaur_ui\obj\Debug\Theseus_vs_minotaur_ui.Properties.Resources.resources
-C:\Users\paul\Documents\GitHub\Game\Theseus_vs_minotaur_ui\obj\Debug\Theseus_vs_Minotaur_library.START.resources
 C:\Users\paul\Documents\GitHub\Game\Theseus_vs_minotaur_ui\obj\Debug\Theseus_vs_minotaur_ui.csproj.GenerateResource.Cache
 C:\Users\paul\Documents\GitHub\Game\Theseus_vs_minotaur_ui\obj\Debug\Theseus_vs_minotaur_ui.LevelDesigner.resources
 C:\Users\paul\Documents\GitHub\Game\Theseus_vs_minotaur_ui\obj\Debug\Theseus_vs_minotaur_ui.SaveLevel.resources
@@ -422,3 +419,8 @@ C:\Users\Catherine\Documents\GitHub\Projects\TheseusVsMinotaur\Theseus_vs_minota
 C:\Users\Catherine\Documents\GitHub\Projects\TheseusVsMinotaur\Theseus_vs_minotaur_ui\obj\Debug\Theseus_vs_minotaur_ui.LOGIN.resources
 C:\Users\Catherine\Documents\GitHub\Projects\TheseusVsMinotaur\Theseus_vs_minotaur_ui\obj\Debug\Theseus_vs_minotaur_ui.userNameForm.resources
 C:\Users\Catherine\Documents\GitHub\Projects\TheseusVsMinotaur\Theseus_vs_minotaur_ui\obj\Debug\Theseus_vs_minotaur_ui.START.resources
+C:\Users\paul\Documents\GitHub\Game\Theseus_vs_minotaur_ui\obj\Debug\Theseus_vs_minotaur_ui.GamePlayForm.resources
+C:\Users\paul\Documents\GitHub\Game\Theseus_vs_minotaur_ui\obj\Debug\Theseus_vs_minotaur_ui.LevelBrowser.resources
+C:\Users\paul\Documents\GitHub\Game\Theseus_vs_minotaur_ui\obj\Debug\Theseus_vs_minotaur_ui.LOGIN.resources
+C:\Users\paul\Documents\GitHub\Game\Theseus_vs_minotaur_ui\obj\Debug\Theseus_vs_minotaur_ui.userNameForm.resources
+C:\Users\paul\Documents\GitHub\Game\Theseus_vs_minotaur_ui\obj\Debug\Theseus_vs_minotaur_ui.START.resources

@@ -49,21 +49,21 @@ namespace Theseus_vs_minotaur_ui
            GameController.CurrentLevel = testLevel;
 
             //Testing level into dictionary and out to xml file
-         //  LevelDictionary<string, Level> levelDictionary = new LevelDictionary<string, Level>();
+           LevelDictionary<string, Level> levelDictionary = new LevelDictionary<string, Level>();
 
             //is the filename the key?
-         //  levelDictionary.Add(testLevel.LevelName, testLevel);
+           levelDictionary.Add(testLevel.LevelName, testLevel);
 
-          // StreamWriter writer = new StreamWriter(@"h:\levels.xml");
-          // XmlSerializer serialiser = new XmlSerializer(levelDictionary.GetType());
-         //  serialiser.Serialize(writer, levelDictionary);
+           StreamWriter writer = new StreamWriter(@"levels.xml");
+           XmlSerializer serialiser = new XmlSerializer(levelDictionary.GetType());
+           serialiser.Serialize(writer, levelDictionary);
 
       
           
 
             //choose as needed to test...
-            Application.Run(new LevelDesigner());
-            //Application.Run(new LOGIN());
+            //Application.Run(new LevelDesigner());
+            Application.Run(new LOGIN());
             //Application.Run(new GamePlayForm());
             //Application.Run(new SaveLevel());
 

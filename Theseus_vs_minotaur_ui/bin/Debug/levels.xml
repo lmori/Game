@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dictionary>
+  <item>
+    <key>
+      <string>First Level</string>
+    </key>
+    <value>
+      <Level xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+        <IsLevelFinished>true</IsLevelFinished>
+        <FileName>test.xml</FileName>
+        <LevelName>First Level</LevelName>
+        <MinotaurXPosition>2</MinotaurXPosition>
+        <TheseusXPosition>2</TheseusXPosition>
+        <MinotaurYPosition>1</MinotaurYPosition>
+        <TheseusYPosition>3</TheseusYPosition>
+        <ExitXPosition>4</ExitXPosition>
+        <ExitYPosition>2</ExitYPosition>
+        <CreatorName>Me</CreatorName>
+        <VerticalWallArray>
+          <ArrayOfBoolean>
+            <boolean>true</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>true</boolean>
+            <boolean>false</boolean>
+          </ArrayOfBoolean>
+          <ArrayOfBoolean>
+            <boolean>true</boolean>
+            <boolean>false</boolean>
+            <boolean>true</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </ArrayOfBoolean>
+          <ArrayOfBoolean>
+            <boolean>true</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>true</boolean>
+            <boolean>false</boolean>
+          </ArrayOfBoolean>
+        </VerticalWallArray>
+        <HorizontalWallArray>
+          <ArrayOfBoolean>
+            <boolean>true</boolean>
+            <boolean>true</boolean>
+            <boolean>true</boolean>
+            <boolean>false</boolean>
+          </ArrayOfBoolean>
+          <ArrayOfBoolean>
+            <boolean>false</boolean>
+            <boolean>true</boolean>
+            <boolean>false</boolean>
+            <boolean>true</boolean>
+          </ArrayOfBoolean>
+          <ArrayOfBoolean>
+            <boolean>false</boolean>
+            <boolean>true</boolean>
+            <boolean>false</boolean>
+            <boolean>true</boolean>
+          </ArrayOfBoolean>
+          <ArrayOfBoolean>
+            <boolean>true</boolean>
+            <boolean>true</boolean>
+            <boolean>true</boolean>
+            <boolean>false</boolean>
+          </ArrayOfBoolean>
+        </HorizontalWallArray>
+        <GridSize>
+          <int>4</int>
+          <int>3</int>
+        </GridSize>
+      </Level>
+    </value>
+  </item>
+</dictionary>

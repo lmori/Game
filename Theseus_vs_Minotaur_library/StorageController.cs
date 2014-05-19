@@ -102,7 +102,7 @@ namespace Theseus_vs_Minotaur_library
 
 
             //Check if file exists
-            if (File.Exists(@"h:\users.xml"))
+            if (File.Exists(@"users.xml"))
             {
                 var userList = deserializeFromXML();
 
@@ -124,7 +124,7 @@ namespace Theseus_vs_Minotaur_library
         {
 
             XmlSerializer serializer = new XmlSerializer(users.GetType()); // getting the users 
-            serializer.Serialize(new StreamWriter(@"h:\users.xml"), users); // adding values to xml file
+            serializer.Serialize(new StreamWriter(@"users.xml"), users); // adding values to xml file
             Console.WriteLine(users);
 
         }
@@ -137,8 +137,7 @@ namespace Theseus_vs_Minotaur_library
             var userList = new UserList();
 
             XmlSerializer deserializer = new XmlSerializer(typeof(UserList));
-            using (StreamReader textReader = new StreamReader(@"h:\users.xml"))
-            {
+            using (StreamReader textReader = new StreamReader(@"users.xml")) //changed path from absolute to relative paths
                 userList = (UserList)deserializer.Deserialize(textReader);
 
                 textReader.Close();

@@ -38,7 +38,7 @@ namespace Theseus_vs_minotaur_ui
 
         private void LoginPage_Load(object sender, EventArgs e)
         {
-            if (File.Exists(@"h:\users.xml")){
+            if (File.Exists(@"users.xml")){
             //get list of users from xml file "users.xml"
             var userList = storage.deserializeFromXML();
            
